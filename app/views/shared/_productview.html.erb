@@ -1,20 +1,22 @@
   <div class="row">
   <% @products.each do |product| %>
             <div class="column column-25">
-             <%= link_to(product) do %>
-                <div class="product-card">
-                    <div class="image">
-                        <img src="<%= product.img %>">
-                    </div>
-                    <div class="profit">
-                        <% @profit = (product.sellprice - product.buyprice) %>
-                        Profit $<%= @profit %>
-                    </div>
-                    <div class="title">
-                        <h5><%= product.title %></h5>
-                    </div>
+                <div class="content">
+                    <%= link_to(product) do %>
+                        <div class="product-card">
+                            <div class="image">
+                                <img src="<%= product.img %>">
+                            </div>
+                            <div class="profit">
+                                <% @profit = (product.sellprice - product.buyprice) %>
+                                Profit $<%= @profit %>
+                            </div>
+                            <div class="title">
+                                <h5><%= product.title %></h5>
+                            </div>
+                        </div>
+                    <% end %>
                 </div>
-                <% end %>
-             </div>
+            </div>
     <% end %> 
 </div>

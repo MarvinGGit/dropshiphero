@@ -33,9 +33,6 @@
     margin-top: 5px;
 }
 
-.product-navigation{
-
-}
 
 .top{
     margin-top: 5em;
@@ -59,4 +56,34 @@
 
 .profit{
     font-weight: 600;
+}
+
+.content{
+    padding: 5px;
+}
+
+.content a{ 
+    color: black;
+}
+
+.product-card{
+    box-shadow: 6px 7px 70px -9px rgba(0,0,0,0.28);
+    padding: 6px;
+    text-align: center;
+}
+
+.product-card .image{
+    margin: -6px;
+}
+
+.product-card .title{
+    color: #606c76;
+}
+
+.product-card .profit{
+    border-top: 1px solid #eaeaea;
+    padding-top: 4px;
+    color: red;
+    font-weight: 600;
+    font-size: 90%;
 }
