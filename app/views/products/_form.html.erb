@@ -1,0 +1,28 @@
+<div class="container">
+    <%= form_for(@product) do |f| %>
+         <fieldset>
+            <label><%= f.label :title %></label>
+            <%= f.text_field :title, id: :title, placeholder: "Title of product", autofocus: true %>
+
+            <div class="row">
+                <div class="column">
+                    <label><%= f.label :buyprice %></label>
+                    <%= f.text_field :buyprice, id: :buyprice, placeholder: "Buyprice of product" %>
+                </div>
+                <div class="column">
+                    <label><%= f.label :sellprice %></label>
+                    <%= f.text_field :sellprice, id: :sellprice, placeholder: "Sellprice of product" %>
+                </div>
+            </div>
+
+            <label>Image Link</label>
+            <%= f.text_field :img, id: :img, placeholder: "Image link of product" %>
+
+            <label><%= f.label :description %></label>
+            <%= f.text_area :description, id: :description, rows: 10, placeholder: "Description of product", autofocus: true %>
+
+            <%= f.submit class: 'button-primary' %>
+         
+        </fieldset>
+    <% end %>
+</div>

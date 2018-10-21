@@ -1,0 +1,28 @@
+<div class="container top">
+    <section class="header">
+        <%= link_to "Back to Products", root_path, class:"button" %>
+        <div class="float-right">
+          <%= link_to "Edit this Product", edit_product_path(@product), class: "button button-outline"%>
+        </div>
+    </section>
+    <section class="header">
+        <div class="row">
+            <div class="column column-75">
+                <h1><%= @product.title %></h1>
+            </div>
+            <div class="column">
+                <h2 class="profit animated infinite pulse delay-2s">Profit: $<%= @profit %></h2>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="column column-40"><img src="<%= @product.img %>" class="product-image"></div>
+        <div class="column column-60">
+            <h4>Description</h4>
+            <p><%= @product.description %></p>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+
+</div>

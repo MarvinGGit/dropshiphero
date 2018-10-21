@@ -1,0 +1,9 @@
+<div class="container">
+    <section class="header top">
+         <h1 align="center">Edit Product</h1>
+    </section>
+    <%= render 'form' %>
+    <div class="container">
+        <%= link_to "Delete this product", product_path(@product), action: "delete", class: "button"%>
+     </div>
+</div>
