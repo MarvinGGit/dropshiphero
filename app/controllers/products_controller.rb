@@ -24,8 +24,10 @@ class ProductsController < ApplicationController
         @profit = (@product.sellprice - @product.buyprice)
     end
 
-    def delete 
-
+    def destroy 
+        set_product
+        @product.destroy
+        redirect_to root_path 
     end
 
     def update
