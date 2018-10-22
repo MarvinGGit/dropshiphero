@@ -1,23 +1,28 @@
 <div class="container top">
     <section class="header">
-        <%= link_to "Back to Products", root_path, class:"button" %>
+        <%= link_to(root_path) do %>
+            <button class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Back to Products</button>
+        <% end %>
         <div class="float-right">
-          <%= link_to "Edit this Product", edit_product_path(@product), class: "button button-outline"%>
+            <%= link_to edit_product_path(@product) do%>
+                <button class="btn btn-default"><i class="fa fa-edit"></i> Edit Product</button>
+            <% end %>
         </div>
     </section>
     <section class="header">
         <div class="row">
-            <div class="column column-75">
+            <div class="col-md-9">
                 <h1><%= @product.title %></h1>
             </div>
-            <div class="column">
-                <h2 class="profit animated infinite pulse delay-2s">Profit: $<%= @profit %></h2>
+            <div class="col-md-3 text-right">
+                <p class="small-label">Profit</p>
+                <h2 class="profit animated infinite pulse delay-2s">💰 $<%= @profit %></h2>
             </div>
         </div>
     </section>
     <div class="row">
-        <div class="column column-40"><img src="<%= @product.img %>" class="product-image"></div>
-        <div class="column column-60">
+        <div class="col-md-4"><img src="<%= @product.img %>" class="img-responsive product-image"></div>
+        <div class="col-md-8">
             <h4>Description</h4>
             <p><%= @product.description %></p>
         </div>
