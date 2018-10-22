@@ -1,17 +1,36 @@
-<!-- <nav class="navigation">
-  <section class="container">
-    
-    <div class="float-right">
-      
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to(root_path, class: "navbar-brand") do %>
+        <%= image_tag("logo.png", class:"navbar-logo")%>
+      <% end %>
+      <%= link_to "New product", new_product_path, class: "btn btn-default navbar-btn navbar-right"%>
     </div>
-  </section>
+  </div>
 </nav> -->
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to "DropshipHero α1.1", root_path, class: "navbar-brand" %>
-      <%= link_to "New product", new_product_path, class: "btn btn-default navbar-btn"%>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to(root_path, class: "navbar-brand") do %>
+        <%= image_tag("logo.png", class:"navbar-logo")%>
+      <% end %>
     </div>
-  </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path, class: ""%></li>
+        <li><%= link_to "Winning Products", products_path , class: ""%></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "New product", new_product_path, class: ""%></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
