@@ -24,7 +24,7 @@
         <div class="col-md-4"><img src="<%= @product.img %>" class="img-responsive product-image"></div>
         <div class="col-md-8">
             <h4>Description</h4>
-            <p><%= @product.description %></p>
+            <p class="product-description"><%= simple_format(@product.description) %></p>
         </div>
     </div>
     <div class="row">

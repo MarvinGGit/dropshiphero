@@ -1,8 +1,41 @@
 <div class="container">
-   <div class="jumbotron">
-       <h1>Welcome!</h1>
-       <p>DropshipHero is currently in version 1.1 so bugs and errors should be expected. We are researching winning products for your ecommerce business.</p>
+   <div class="jumbotron center">
+        <%= image_tag("logo", id: "homeimage")%>
+        <h1>Welcome!</h1>
+       <p>DropshipHero is currently in version 1.1 so bugs and errors should be expected. We are researching winning products for your ecommerce business. </p>
    </div>
     
-     
+    <%= render 'shared/joinnow' %>
+
+    <div class="jumbotron bg-red">
+        <div class="row">
+            <div class="col-md-2 col-xs-12"><%= image_tag("money.png", class: "img-responsive") %></div>
+            <div class="col-md-10 col-xs-12">
+                <h3>Profitable</h3>
+                <p>We are only presenting you truly profitable products. You can find the profit right underneath the product image for a quick decision.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron bg-red">
+        <div class="row">
+            <div class="col-md-10 col-xs-12">
+                <h3>Target audience</h3>
+                <p>Do you have problems finding the right target audience for your products? Not anymore. We are presenting you great target audiences for <i class="fa fa-facebook-square"></i> Facebook and Influencers on <i class="fa fa-instagram"></i> Instagram you can use to quickly & profitably sell your products.</p>
+            </div>
+            <div class="col-md-2 col-xs-12"><%= image_tag("targetaudience.png", class: "img-responsive") %></div>
+        </div>
+    </div>
+    <div class="jumbotron bg-red">
+        <div class="row">
+            <div class="col-md-2 col-xs-12"><%= image_tag("online-shop.png", class: "img-responsive") %></div>
+            <div class="col-md-10 col-xs-12">
+                <h3>Description & Images</h3>
+                <p>Quickly set up your product page with our pre written and conversion optimized descriptions and images. No more worries about copywriting.</p>
+            </div>
+        </div>
+    </div>
+
+    <%= render 'shared/joinnow' %>
+
+
 </div>

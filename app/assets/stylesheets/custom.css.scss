@@ -19,6 +19,10 @@
     z-index: 1;
 }
 
+.center{
+    text-align: center;
+}
+
 .navbar-logo{
     max-height: 30px;
     margin-top: -5px;
@@ -94,6 +98,16 @@
     font-size: 120%;
 }
 
+.bg-red{
+    background-color: rgb(180, 62, 43);
+    color: white;
+}
+
+.bg-blue{
+    background-color: #092033;
+    color: white;
+}
+
 .product-card .profit{
     border-top: 1px solid #eaeaea;
     padding-top: 8px;
@@ -104,4 +118,50 @@
 
 .small-label{
     margin-bottom: -20px;
+}
+
+.home-showcase{
+    max-height: 200px;
+}
+
+.join-now{
+    text-align: center;
+}
+
+.btn-join{
+    background-color: #ff9100;
+    color: white;
+
+    font-weight: 800;
+    font-size: 200%;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    width: 50%;
+}
+
+.btn-join:hover{
+    color:white;
+}
+
+.shadowed{
+    box-shadow: 10px 10px 49px -24px rgba(0,0,0,0.75);
+}
+
+
+#homeimage{
+    max-height: 70px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.productindex{
+    margin-bottom: 50px;
+}
+
+.product-discription{
+    font-size: 110%;
 }
