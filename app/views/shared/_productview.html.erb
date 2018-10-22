@@ -2,7 +2,7 @@
     <% @products.each do |product| %>
                 <div class="col-md-3 col-xs-12">
                     <div class="content">
-                        <%= link_to(product) do %>
+                        <%= link_to(product, class: "hvr-grow") do %>
                             <div class="product-card">
                                 <div class="image">
                                     <img src="<%= product.img %>" class="img-responsive">
