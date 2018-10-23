@@ -1,0 +1,18 @@
+    <section class="header">
+        <div class="row">
+            <div class="col-md-9">
+                <h1><%= @product.title %></h1>
+            </div>
+            <div class="col-md-3 text-right">
+                <p class="small-label">Profit</p>
+                <h2 class="profit animated infinite pulse delay-2s">💰 $<%= @profit %></h2>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-md-4"><img src="<%= @product.img %>" class="img-responsive product-image"></div>
+        <div class="col-md-8">
+            <h4>Description</h4>
+            <%= simple_format(@product.description, class: "product-description") %>
+        </div>
+    </div>

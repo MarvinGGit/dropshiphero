@@ -1,0 +1,47 @@
+<div class="row">
+        <div class="col-md-12 col-xs-12"><h2>
+            <i class="fa fa-facebook-square blue"></i> Facebook</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-12"> 
+            <div class="content">
+                <div class="audiences center">
+                    <div class="title"><h3>Audiences</h3></div>
+                    <div class="audiencelist">
+                        <table class="table-striped">
+                            <tr><td>Test Audience 1</td></tr>
+                            <tr><td>Test Audience 2</td></tr>
+                            <tr><td>Test Audience 3</td></tr>
+                            <tr><td>Test Audience 4</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-12"> 
+            <div class="content">
+                <div class="audiences">
+                    <div class="title"><h3>Ad Copy</h3></div>
+                    <%= simple_format(@product.adcopy) %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-xs-12"> 
+            <div class="content">
+                <div class="audiences">
+                    <%= link_to(@product.videoadurl) do %>
+                        <button class="btn btn-default btn-lg ">
+                            <i class="fa fa-film" id="icon"></i> Video Ad
+                        </button>
+                    <% end %>
+                    
+                    <%= link_to(@product.pictureadurl) do %>
+                        <button class="btn btn-default btn-lg top-margin">
+                            <i class="fa fa-camera" id="icon"></i> Picture Ad
+                        </button>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+</div>

@@ -38,6 +38,33 @@
                     <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Description of the product" %>
                 </div>
             </div>
+
+            <h2>Ads</h2>
+            <div class="form-group">
+               <div class="control-label col-sm-2">  
+                    <%= f.label :adcopy %> 
+               </div>
+                <div class="col-sm-8">
+                    <%= f.text_area :adcopy, rows: 10, class: "form-control", placeholder: "AdCopy for the product" %>
+                </div>
+            </div>
+            <div class="form-group">
+               <div class="control-label col-sm-2">  
+                    <%= f.label :videoadurl %> 
+               </div>
+               <div class="col-sm-8">
+                    <%= f.text_field :videoadurl, class: "form-control", placeholder: "Video Ad Link"%>
+                </div>
+            </div>
+            <div class="form-group">
+               <div class="control-label col-sm-2">  
+                    <%= f.label :pictureadurl %> 
+               </div>
+               <div class="col-sm-8">
+                    <%= f.text_field :pictureadurl, class: "form-control", placeholder: "Image Ad Link"%>
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <%= f.submit class: 'btn btn-primary btn-lg' %>
