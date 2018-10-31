@@ -6,5 +6,6 @@ class AddStoreToProducts < ActiveRecord::Migration[5.2]
     add_column :products, :storeprice, :double
     add_column :products, :storeepacket, :boolean
     add_column :products, :storeepacketprice, :double
+    
   end
 end
