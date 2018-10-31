@@ -1,4 +1,4 @@
-class AddStoresToProducts < ActiveRecord::Migration[5.2]
+class AddStoreToProducts < ActiveRecord::Migration[5.2]
   def change
     add_column :products, :storename, :string
     add_column :products, :storeurl, :string
