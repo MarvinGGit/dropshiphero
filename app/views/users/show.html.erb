@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-xs-12">
+                <% if !@user.admin? %> 
+                    <span class="label label-info">Starter Plan</span>
+                <% else %>
+                    <span class="label label-danger">Admin</span>
+                <% end %>
+                
+                <h1><%= @user.firstname %> <%= @user.lastname %></h1>
+        </div>
+        <div class="col-md-2 col-xs-12">
+            <br> <%= link_to edit_user_path(@user) do %>
+                <button class="btn btn-primary float-right"> Edit your profile</button>
+            <% end %>
+        </div>
+    </div>
+    <p>
+        <%= @user.username %> <br>
+        <%= @user.email %>
+    </p>
+
+   
+</div>

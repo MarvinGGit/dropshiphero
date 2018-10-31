@@ -2,16 +2,21 @@
    
     <section class="header">
         <%= link_to(products_path) do %>
-            <button class="btn btn-primary btn-lg"><i class="fa fa-arrow-circle-left"></i> Back to Products</button>
+            <button class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Back to Products</button>
         <% end %>
-        <div class="float-right">
-            <%= link_to edit_product_path(@product) do%>
-                <button class="btn btn-default"><i class="fa fa-edit"></i> Edit Product</button>
-            <% end %>
-        </div>
+        <% if current_user.admin? %>
+            <div class="float-right">
+                <%= link_to edit_product_path(@product) do%>
+                    <button class="btn btn-default"><i class="fa fa-edit"></i> Edit Product</button>
+                <% end %>
+            </div>
+        <% end %>
     </section>
 
+
         <%= render 'section_productdescription' %>
+    <hr>
+        <%= render 'section_store' %>
     <hr>
         <%= render 'section_facebookads' %>
     <hr>

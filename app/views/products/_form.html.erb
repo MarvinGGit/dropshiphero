@@ -10,15 +10,9 @@
             </div>
             <div class="form-group">
                <div class="control-label col-sm-2">  
-                    <%= f.label :buyprice %> 
-               </div>
-               <div class="col-sm-3">
-                    <%= f.text_field :buyprice, class: "form-control", placeholder: "Buyprice" %>
-                </div>
-               <div class="control-label col-sm-1">  
                     <%= f.label :sellprice %> 
                </div>
-               <div class="col-sm-4">
+               <div class="col-sm-8">
                     <%= f.text_field :sellprice, class: "form-control", placeholder: "Sellprice" %>
                 </div>
             </div>
@@ -39,31 +33,114 @@
                 </div>
             </div>
 
-            <h2>Ads</h2>
-            <div class="form-group">
-               <div class="control-label col-sm-2">  
-                    <%= f.label :adcopy %> 
-               </div>
-                <div class="col-sm-8">
-                    <%= f.text_area :adcopy, rows: 10, class: "form-control", placeholder: "AdCopy for the product" %>
+            <h2>Store</h2>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Store Name</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :storename, class: "form-control", placeholder: "Store Name"%>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-               <div class="control-label col-sm-2">  
-                    <%= f.label :videoadurl %> 
-               </div>
-               <div class="col-sm-8">
-                    <%= f.text_field :videoadurl, class: "form-control", placeholder: "Video Ad Link"%>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Store URL</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :storeurl, class: "form-control", placeholder: "Store URL"%>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-               <div class="control-label col-sm-2">  
-                    <%= f.label :pictureadurl %> 
-               </div>
-               <div class="col-sm-8">
-                    <%= f.text_field :pictureadurl, class: "form-control", placeholder: "Image Ad Link"%>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Store Price</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :storeprice, class: "form-control", placeholder: "Store Price"%>
+                    </div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Store Feedback</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :storefeedbackscore, class: "form-control", placeholder: "Store Feedback Store"%>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>E-Packet</label>
+                    </div>
+                    <div class="col-sm-2">
+                            <%= f.check_box :storeepacket, class: "form-control", placeholder: "EPacket possible?"%>
+                    </div>
+
+                    <div class="control-label col-sm-2">  
+                            <label>E-Packet Price</label>
+                    </div>
+                    <div class="col-sm-4">
+                            <%= f.text_field :storeepacketprice, class: "form-control", placeholder: "EPacket Price"%>
+                    </div>
+                </div>
+
+            <h2>Facebook Ads</h2>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Facebook AdCopy</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <%= f.text_area :adcopy, rows: 10, class: "form-control", placeholder: "AdCopy for the product" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Video Ad URL</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :videoadurl, class: "form-control", placeholder: "Video Ad Link"%>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Picutre Ad URL</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :pictureadurl, class: "form-control", placeholder: "Image Ad Link"%>
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <%= f.label :audiences %> 
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_area :audiences, class: "form-control", placeholder: "Audience1,Audience2,Audience3,..."%>
+                    </div>
+                </div>
+            
+            <h2>Instagram Ads</h2>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <%= f.label :influencer %> 
+                    </div>
+                    <div class="col-sm-8">
+                        <%= f.text_area :influencer, class: "form-control", placeholder: "influencer1,influencer2,influencer3,..." %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Instagram AdCopy</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <%= f.text_area :instagramadcopy, rows: 10, class: "form-control", placeholder: "AdCopy for the Description" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Free + Shipping?</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.check_box :freeplusshipping, class: "form-control", placeholder: "Video Ad Link"%>
+                    </div>
+                </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">

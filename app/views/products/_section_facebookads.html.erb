@@ -10,10 +10,9 @@
                     <div class="title"><h3>Audiences</h3></div>
                     <div class="audiencelist">
                         <table class="table-striped">
-                            <tr><td>Test Audience 1</td></tr>
-                            <tr><td>Test Audience 2</td></tr>
-                            <tr><td>Test Audience 3</td></tr>
-                            <tr><td>Test Audience 4</td></tr>
+                            <% @audiences.each do |audience| %>
+                                <tr><td><%= audience %></td></tr>
+                            <% end %>
                         </table>
                     </div>
                 </div>

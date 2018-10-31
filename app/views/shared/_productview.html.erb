@@ -8,11 +8,11 @@
                                     <img src="<%= product.img %>" class="img-responsive">
                                 </div>
                                 <div class="profit">
-                                    <% @profit = (product.sellprice - product.buyprice) %>
+                                    <% @profit = (product.sellprice - product.storeprice) %>
                                     💰 $<%= @profit %>
                                 </div>
                                 <div class="title">
-                                    <h5><%= product.title %></h5>
+                                    <h4><%= product.title %></h4>
                                 </div>
                             </div>
                         <% end %>

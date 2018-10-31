@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
 
     def home
-        @products = Product.all
+        if logged_in?
+            redirect_to products_path
+        end
     end
 
 end

@@ -12,7 +12,11 @@ class ProductsController < ApplicationController
     end
 
     def index 
-        @products = Product.all
+        if !logged_in?
+            redirect_to root_path
+        else
+            @products = Product.all
+        end
     end 
 
     def update
@@ -20,8 +24,19 @@ class ProductsController < ApplicationController
     end 
     
     def show
-        set_product
-        @profit = (@product.sellprice - @product.buyprice)
+        if !logged_in?
+            redirect_to root_path
+        else
+            set_product
+            if @product.audiences
+                @audiences = @product.audiences.split(',')
+            end
+            if @product.influencer
+                @influencer = @product.influencer.split(',')
+            end
+            
+            @profit = (@product.sellprice - @product.storeprice)
+        end
     end
 
     def destroy 
@@ -37,11 +52,14 @@ class ProductsController < ApplicationController
         else
             render 'edit' 
         end
-
     end
 
     def new
-        @product = Product.new
+        if logged_in? and current_user.admin?
+             @product = Product.new
+        else
+            redirect_to root_path
+        end
     end
 
     def edit
@@ -54,6 +72,6 @@ class ProductsController < ApplicationController
         end
 
         def product_params 
-            params.require(:product).permit(:title, :img, :buyprice, :sellprice, :description, :adcopy, :videoadurl, :imageadurl)
+            params.require(:product).permit(:title, :img, :buyprice, :sellprice, :description, :adcopy, :audiences, :videoadurl, :imageadurl, :influencer, :instagramadcopy, :freeplusshipping, :storename, :storeurl, :storeprice, :storefeedbackscore, :storeepacketprice, :storeepacket)
         end
 end
