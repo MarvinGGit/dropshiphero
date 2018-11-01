@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_31_201049) do
+ActiveRecord::Schema.define(version: 2018_11_01_081417) do
 
   create_table "products", force: :cascade do |t|
     t.string "title"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2018_10_31_201049) do
     t.boolean "admin", default: false
     t.string "firstname"
     t.string "lastname"
+    t.string "country"
   end
 
 end

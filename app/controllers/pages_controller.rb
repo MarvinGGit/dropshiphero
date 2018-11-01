@@ -6,4 +6,8 @@ class PagesController < ApplicationController
         end
     end
 
+    def dashboard
+        @usercount = User.count
+    end
+
 end

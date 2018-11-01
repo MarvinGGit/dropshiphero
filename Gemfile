@@ -12,6 +12,9 @@ gem 'puma', '~> 3.11'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bcrypt', '~> 3.1.7' 
+gem "chartkick"
+gem 'groupdate'
+gem 'country_select', '~> 3.1'
 gem "font-awesome-rails"
 gem "animate-rails"
 gem 'sass-rails', '~> 5.0'

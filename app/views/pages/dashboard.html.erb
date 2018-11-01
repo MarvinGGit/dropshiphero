@@ -1,0 +1,25 @@
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <h1><i class="fa fa-line-chart" aria-hidden="true"></i> Admin Dashboard</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <div class="UserPanel">
+                    <div class="title center"><h4>Users over time</h4></div>
+                    <%= area_chart User.group_by_day(:created_at).count, colors: ["#ffbb00", "#fff"] %>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <div class="UserCountryPanel">
+                    <div class="title center"><h4>Users by country</h4></div>
+                     <%= geo_chart User.group(:country).count %> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
