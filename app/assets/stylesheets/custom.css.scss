@@ -180,6 +180,13 @@
     color: #373e44;
 }
 
+.login{
+    padding: 10px;
+    padding-top: 50px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+}
+
 #igcolor{
     color: #58070e;
 }
@@ -209,4 +216,25 @@
 .title{
     margin-bottom: 10px;
     color: #373e44;
+}
+
+.btn-primary{
+    background-color: #ff9100 !important;
+    border-color: #ff9100 !important;
+}
+
+.btn-primary:hover{
+    background-color: #df7f03 !important;
+    border-color: #df7f03 !important;
+}
+
+.btn-primary:active{
+    outline: none !important;
+    background-color: #df7f03 !important;
+    border-color: #df7f03 !important;
+}
+
+.btn-primary:visited{
+    background-color: #df7f03 !important;
+    border-color: #df7f03 !important;
 }

@@ -7,7 +7,11 @@ class PagesController < ApplicationController
     end
 
     def dashboard
-        @usercount = User.count
+        if current_user.admin?
+              @usercount = User.count
+        else
+            redirect_to root_path
+        end
     end
 
 end
