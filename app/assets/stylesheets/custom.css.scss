@@ -299,7 +299,6 @@ body
 .box
 {
     text-align: center;
-
     padding-bottom: 10px;
 }
 
@@ -310,8 +309,8 @@ body
 
 .box-content{
     border-radius: 10px;
-    padding: 10px;
-    padding-top:0px;
+    padding: 20px;
+    padding-top: 0px;
 }
 
 .box .info-label
@@ -327,6 +326,23 @@ body
     font-size: 200%;
 }
 
+.box .title{
+    font-size: 200%;
+    color: white;
+    padding-top: 10px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.main-row{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 #minus{
     margin-top: 33px;
+}
+
+#padding-left{
+    padding-left: 20px;
 }

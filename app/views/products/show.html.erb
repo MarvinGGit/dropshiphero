@@ -12,12 +12,14 @@
     <% end %>
   </section>
   <div class="row">
-    <div class="col-md-12"><h1 class="product-title"><%= @product.title %></h1></div>
+    <div class="col-md-12">
+      <h1 class="product-title"><%= @product.title %></h1>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-5 col-xs-12"><img src="<%= @product.img %>" class="img-responsive product-image"></div>
     <div class="col-md-7 col-xs-12">
-      <div class="row">
+      <div class="row main-row">
         <div class="col-md-4 col-xs-12 box">
           <div class="box-content bg-orange shadowed">
             <p class="info-label">HeroScore</p>
@@ -27,7 +29,7 @@
         <div class="col-md-8 col-xs-12 box">
           <div class="box-content bg-red shadowed">
             <div class="row">
-              <div class="col-xs-3">
+              <div class="col-xs-3" id="padding-left">
                 <p class="info-label">Sellprice</p>
                 <h3 class="score"><%= number_to_currency(@product.sellprice) %></h3>
               </div>
@@ -46,6 +48,11 @@
                 <h3 class="score profit"><%= number_to_currency(@profit) %></h3>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-xs-12 box">
+          <div class="box-content bg-blue">
+            <h4 class="title">Ad Engagement</h4>
           </div>
         </div>
       </div>
