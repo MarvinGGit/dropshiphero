@@ -2,64 +2,86 @@
 @import "bootstrap";
 
 @import "font-awesome";
-@import "https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic";
 @import "animate";
 
-.navbar-default .navbar-nav li a {
+@import "https://fonts.googleapis.com/css?family=Arvo";
+@import "https://fonts.googleapis.com/css?family=Nunito";
+
+body
+{
+    font-family: 'Nunito';
+}
+
+.navbar-default .navbar-nav li a 
+{
+    font-weight: 500;
     color: #373e44;
 }
 
-.navbar-default .navbar-nav li a:hover {
+.navbar-default .navbar-nav li a:hover 
+{
     color: #ff9100;
 }
 
-.center{
+.center
+{
     text-align: center;
 }
 
-.navbar-logo{
+.navbar-logo
+{
     max-height: 30px;
     margin-top: -5px;
 }
 
-.top-margin{
+.top-margin
+{
     margin-top: 10px;
 }
 
-.float-right{
+.float-right
+{
     float: right;
 }
 
-.text-right{
+.text-right
+{
     text-align:right;
 }
 
-.header{
+.header
+{
     margin-top: 1em;
 }
 
-.product-image{
+.product-image
+{
     border-radius: 5px;
 }
 
-.profit{
+.profit
+{
     font-weight: 600;
 }
 
-.content{
+.content
+{
     padding: 5px;
     margin-top: 10px;
 }
 
-.content a{ 
+.content a
+{ 
     color: black;
 }
 
-.content a:hover{
+.content a:hover
+{
     text-decoration: none;
 }
 
-.hvr-grow {
+.hvr-grow 
+{
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
@@ -72,37 +94,44 @@
 
 .hvr-grow:hover,
 .hvr-grow:focus,
-.hvr-grow:active {
+.hvr-grow:active 
+{
     transform: scale(1.1);
 }
 
-.product-card{
+.product-card
+{
     box-shadow: 6px 7px 30px -6px rgba(0,0,0,0.28);
     padding: 6px;
     text-align: center;
     text-decoration: none;
 }
 
-.product-card .image{
+.product-card .image
+{
     margin: -6px;
 }
 
-.product-card .title{
+.product-card .title
+{
     color: #606c76;
     font-size: 120%;
 }
 
-.bg-red{
+.bg-red
+{
     background-color: rgb(180, 62, 43);
     color: white;
 }
 
-.bg-blue{
+.bg-blue
+{
     background-color: #092033;
     color: white;
 }
 
-.product-card .profit{
+.product-card .profit
+{
     border-top: 1px solid #eaeaea;
     padding-top: 8px;
     color: black;
@@ -110,19 +139,23 @@
     font-size: 110%;
 }
 
-.small-label{
+.small-label
+{
     margin-bottom: -20px;
 }
 
-.home-showcase{
+.home-showcase
+{
     max-height: 200px;
 }
 
-.join-now{
+.join-now
+{
     text-align: center;
 }
 
-.btn-join{
+.btn-join
+{
     background-color: #ff9100;
     color: white;
 
@@ -136,7 +169,8 @@
     width: 100%;
 }
 
-.btn-join:hover{
+.btn-join:hover
+{
     color:white;
 }
 
@@ -145,100 +179,154 @@
 }
 
 
-#homeimage{
+#homeimage
+{
     max-height: 70px;
     border: 1px solid white;
     padding: 10px;
     border-radius: 5px;
 }
 
-.productindex{
+.productindex
+{
     margin-bottom: 50px;
 }
 
-.product-description{
+.product-description
+{
     font-size: 120%;
 }
 
-.blue{
+.blue
+{
     color: #0b0d5c;
 }
 
-.audiences{
+.audiences
+{
     background-color: white;
     padding-left: 10px;
 }
 
-.audiencelist .table-striped{
+.audiencelist .table-striped
+{
     width: 100%;
 }
 
-.audiencelist .table-striped td{
+.audiencelist .table-striped td
+{
     font-size: 110%;
     padding-top: 2px;
     padding-bottom: 2px;
     color: #373e44;
 }
 
-.login{
+.login
+{
     padding: 10px;
     padding-top: 50px;
     background-color: #eaeaea;
     border-radius: 5px;
 }
 
-#igcolor{
+#igcolor
+{
     color: #58070e;
 }
 
-#shopicon{
+#shopicon
+{
     color: #ff9100;
 }
 
-#icon{
+#icon
+{
     color:black;
 }
 
-.UserPanel{
+.UserPanel
+{
     background-color: white;
     color: #373e44;
     padding: 10px;
     border-radius: 5px;
 }
 
-.UserCountryPanel{
+.UserCountryPanel
+{
     background-color: white;
     color: #373e44;
     padding: 10px;
     border-radius: 5px;
 }
 
-.title{
+.title
+{
     margin-bottom: 10px;
     color: #373e44;
 }
 
-.btn-primary{
+.btn-primary
+{
     background-color: #ff9100 !important;
     border-color: #ff9100 !important;
 }
 
-.btn-primary:hover{
+.btn-primary:hover
+{
     background-color: #df7f03 !important;
     border-color: #df7f03 !important;
 }
 
-.btn-primary:active{
+.btn-primary:active
+{
     outline: none !important;
     background-color: #df7f03 !important;
     border-color: #df7f03 !important;
 }
 
-.btn-primary:visited{
+.btn-primary:visited
+{
     background-color: #df7f03 !important;
     border-color: #df7f03 !important;
 }
 
-.tagline{
+.tagline
+{
     font-size: 400%;
+}
+
+.box
+{
+    text-align: center;
+
+    padding-bottom: 10px;
+}
+
+.bg-orange{
+    background-color: #ff9100;
+    color:white;
+}
+
+.box-content{
+    border-radius: 10px;
+    padding: 10px;
+    padding-top:0px;
+}
+
+.box .info-label
+{
+    padding-top: 10px;
+    margin-bottom: -15px;
+
+}
+
+.box .score
+{
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#minus{
+    margin-top: 33px;
 }
