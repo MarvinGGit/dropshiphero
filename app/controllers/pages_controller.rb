@@ -4,6 +4,8 @@ class PagesController < ApplicationController
         if logged_in?
             redirect_to products_path
         end
+
+        @user = User.new
     end
 
     def dashboard
