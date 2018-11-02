@@ -19,15 +19,14 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to(root_path, class: "navbar-brand") do %>
-        <%= image_tag("logo.png", class:"navbar-logo")%>
+          <h1 class="navbar-logo"><strong>DropshipHero</strong></h1>
       <% end %>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if logged_in? %>  
-            <li class="navbarlink"><%= link_to(products_path) do %><i class="fa fa-money" aria-hidden="true"></i> Winning Products<% end %></li>
-            <li><%= link_to(products_path) do%><i class="fa fa-graduation-cap" aria-hidden="true"></i> Hero Academy<%end%></li>
+            <li class="navbarlink"><%= link_to(products_path) do %>Winning Products<% end %></li>
           <% else %>
           <li><%= link_to(root_path) do %><i class="fa fa-home"></i> Home <% end %></li>
         <% end %>

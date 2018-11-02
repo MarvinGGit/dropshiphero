@@ -7,20 +7,33 @@
 @import "https://fonts.googleapis.com/css?family=Arvo";
 @import "https://fonts.googleapis.com/css?family=Nunito";
 
+@font-face {
+    font-family: "CircularStd Book";
+    src: font-url('Circular.otf') format("truetype");
+  }
+
 body
 {
-    font-family: 'Nunito';
+    font-family: 'CircularStd Book';
+    color: #484848;
 }
 
 .navbar-default .navbar-nav li a 
 {
     font-weight: 500;
+    font-size: 110%;
     color: #484848;
 }
 
 .navbar-default .navbar-nav li a:hover 
 {
-    color: #ff9100;
+    color: #F16664;
+}
+
+.navbar-logo{
+    color: #F16664;
+    font-size: 120%;
+    letter-spacing: -1px;
 }
 
 .center
@@ -120,14 +133,19 @@ body
 
 .bg-red
 {
-    background-color: rgb(180, 62, 43);
+    background-color: #F16664;
     color: white;
 }
 
 .bg-blue
 {
-    background-color: #092033;
+    background-color: #007D8C;
     color: white;
+}
+
+.bg-beige{
+    background-color: #FFF6E6;
+    color: #484848;
 }
 
 .product-card .profit
@@ -136,7 +154,7 @@ body
     padding-top: 8px;
     color: #484848;
     font-weight: 600;
-    font-size: 110%;
+    font-size: 150%;
 }
 
 .small-label
@@ -156,8 +174,8 @@ body
 
 .btn-join
 {
-    background-color: #ff9100;
-    color: white;
+    background-color: #F16664;
+    color: #FFF6E6;
 
     font-weight: 800;
     font-size: 150%;
@@ -171,7 +189,7 @@ body
 
 .btn-join:hover
 {
-    color:white;
+    color: #FFF6E6;
 }
 
 .shadowed{
@@ -204,7 +222,7 @@ body
 
 .audiences
 {
-    background-color: white;
+    background-color: #FFF6E6;
     padding-left: 10px;
 }
 
@@ -218,14 +236,14 @@ body
     font-size: 110%;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: #373e44;
+    color: #484848;
 }
 
 .login
 {
     padding: 10px;
     padding-top: 50px;
-    background-color: #eaeaea;
+    background-color: #FFF6E6;
     border-radius: 5px;
 }
 
@@ -268,27 +286,27 @@ body
 
 .btn-primary
 {
-    background-color: #ff9100 !important;
-    border-color: #ff9100 !important;
+    background-color: #F16664 !important;
+    border-color: #F16664 !important;
 }
 
 .btn-primary:hover
 {
-    background-color: #df7f03 !important;
-    border-color: #df7f03 !important;
+    background-color: #F16664 !important;
+    border-color: #F16664 !important;
 }
 
 .btn-primary:active
 {
     outline: none !important;
-    background-color: #df7f03 !important;
-    border-color: #df7f03 !important;
+    background-color: #F16664 !important;
+    border-color: #F16664 !important;
 }
 
 .btn-primary:visited
 {
-    background-color: #df7f03 !important;
-    border-color: #df7f03 !important;
+    background-color: #F16664 !important;
+    border-color: #F16664 !important;
 }
 
 .tagline
@@ -302,8 +320,8 @@ body
     padding-bottom: 10px;
 }
 
-.bg-orange{
-    background-color: #ff9100;
+.bg-light-blue{
+    background-color: #6BB7B9;
     color:white;
 }
 
@@ -328,7 +346,7 @@ body
 .box .score
 {
     font-weight: bold;
-    font-size: 200%;
+    font-size: 250%;
     padding-bottom: -10px;
 }
 
@@ -351,7 +369,7 @@ body
 
 .engagement{
     text-align: left;
-    font-size: 130%;
+    font-size: 150%;
     margin-bottom: 10px;
     margin-left: 10px;
 }
@@ -364,4 +382,8 @@ body
 .btn-facebook:hover{
     background-color: #8b9dc3;
     color:white;
+}
+
+.img-box{
+    margin-bottom: 10px;
 }
