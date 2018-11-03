@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'dashboard' => 'pages#dashboard'
 
   resources :products
+  resources :categories
 
   get 'signup', to: 'users#new'
   resources :users, except: [:new]

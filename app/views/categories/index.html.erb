@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Categories</h1>
+  <% @categories.each do |category| %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="category-card bg-light-blue">
+          <div class="row">
+            <div class="col-md-8">
+                <h1> <%= category.name %> </h1>
+            </div>
+            <div class="col-md-4">
+                <%= link_to(category_path(category)) do %><button class="btn btn-primary btn-lg">View Products</button><% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
