@@ -27,6 +27,7 @@
       <ul class="nav navbar-nav">
         <% if logged_in? %>  
             <li class="navbarlink"><%= link_to(products_path) do %>Winning Products<% end %></li>
+            <li class="navbarlink"><%= link_to(categories_path) do %>Categories<% end %></li>
           <% else %>
           <li><%= link_to(root_path) do %> Home <% end %></li>
           <li><%= link_to(root_path) do %> Prices <% end %></li>
@@ -46,6 +47,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><%= link_to "New product", new_product_path, class: ""%></li>
+                <li><%= link_to "New category", new_category_path, class: ""%></li>
                 <li><%= link_to "Dashboard", dashboard_path, class: ""%></li>
               </ul>
             </ul>

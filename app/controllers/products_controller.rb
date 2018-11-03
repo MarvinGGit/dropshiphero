@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
 
-
     def create 
         @product = Product.new(product_params)
         if @product.save
@@ -12,15 +11,14 @@ class ProductsController < ApplicationController
     end
 
     def index 
+        @title = "All Winning Products"
+        @categories = Category.all
+
         if !logged_in?
             redirect_to root_path
         else
             @products = Product.all
         end
-    end 
-
-    def update
-
     end 
     
     def show
@@ -72,6 +70,6 @@ class ProductsController < ApplicationController
         end
 
         def product_params 
-            params.require(:product).permit(:title, :img, :buyprice, :sellprice, :description, :adcopy, :audiences, :videoadurl, :imageadurl, :influencer, :instagramadcopy, :freeplusshipping, :storename, :storeurl, :storeprice, :storefeedbackscore, :storeepacketprice, :storeepacket)
+            params.require(:product).permit(:title, :img, :buyprice, :sellprice, :description, :adcopy, :audiences, :videoadurl, :imageadurl, :influencer, :instagramadcopy, :freeplusshipping, :storename, :storeurl, :storeprice, :storefeedbackscore, :storeepacketprice, :storeepacket, category_ids: [])
         end
 end

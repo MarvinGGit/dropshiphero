@@ -1,24 +1,65 @@
 class CategoriesController < ApplicationController
 
     def new
-        @category = Category.new
+        if logged_in? and current_user.admin?
+            @category = Category.new
+        else
+            redirect_to root_path
+        end
+
     end
 
     def create 
-        @category = Category.new(category_params)
-        if @category.save
-            redirect_to categories_path
+        if logged_in? and current_user.admin?
+            @category = Category.new(category_params)
+            if @category.save
+                redirect_to categories_path
+            else
+                render 'new'
+            end
         else
-            render 'new'
+            redirect_to root_path
+        end
+    end
+
+    def update
+        if logged_in? and current_user.admin?
+            set_category
+            if @category.update(category_params)
+                redirect_to category_path(@category)
+            else
+                render 'edit' 
+            end
+        else
+            redirect_to root_path
         end
     end
 
     def edit
-        set_category
+        if logged_in? and current_user.admin?
+          set_category
+        else
+            redirect_to root_path
+        end
+    end
+
+    def show 
+        if logged_in? 
+            set_category
+            @title = @category.name + " Products"
+            @categories = Category.all
+            @products = @category.products
+        else
+            redirect_to root_path
+        end
     end
 
     def index 
-        @categories = Category.all
+        if logged_in?
+            @categories = Category.all
+        else
+            redirect_to root_path
+        end
     end
 
     private
@@ -30,4 +71,5 @@ class CategoriesController < ApplicationController
             @category = Category.find(params[:id])
         end
 
+        
 end

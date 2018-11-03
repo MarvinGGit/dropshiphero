@@ -1,3 +1,17 @@
+  
+  <div class="container productindex">
+    <section class="product-navigation header top-margin">
+          <h1 class="animated fadeIn fast"><%= @title %></h1>
+    </section>
+    <hr>
+    <section class="product-categories">
+      <%= link_to(products_path) do %><span class="category-select hvr-grow">All</span><% end %>
+      <% @categories.each do |category| %>
+            <%= link_to(category_path(category)) do %><span class="category-select hvr-grow"><%= category.name %></span><% end %>
+      <% end %>
+    </section>
+    <hr>
+
   <div class="row">
     <% @products.each do |product| %>
                 <div class="col-md-3 col-xs-12">
@@ -19,4 +33,6 @@
                     </div>
                 </div>
         <% end %> 
+    </div>
+
 </div>
