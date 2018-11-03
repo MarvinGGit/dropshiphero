@@ -5,20 +5,39 @@
     margin-top: -20px;
 }
 
-.sign-up-card{
+.home-sign-up-card{
     background-color: white;
     border-radius: 5px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 10px;
     padding-top: 5px;
+    margin-bottom: 20px;
 }
 
-.sign-up-card h1{
+.home-sign-up-card h1{
     font-weight: bold;
-    font-size: 165%;
+    font-size: 180%;
 }
 
-.country-select{
-    width: 50px;
+.home-login-panel{
+  margin-top: 20px;
 }
+
+.home-signup-panel h1{
+    font-size: 160%;
+}
+
+.home-signup-panel h3{
+    font-size: 140%;
+}
+.home-signup-panel h4{
+    font-size: 120%;
+    margin-bottom: -10px;
+}
+
+@media (min-width: 992px) { 
+    .home-sign-up-card{
+        margin-top: 10vh;
+    }
+ }

@@ -28,13 +28,16 @@
         <% if logged_in? %>  
             <li class="navbarlink"><%= link_to(products_path) do %>Winning Products<% end %></li>
           <% else %>
-          <li><%= link_to(root_path) do %><i class="fa fa-home"></i> Home <% end %></li>
+          <li><%= link_to(root_path) do %> Home <% end %></li>
+          <li><%= link_to(root_path) do %> Prices <% end %></li>
+          <li><%= link_to(root_path) do %> FAQ <% end %></li>
+          <li><%= link_to(root_path) do %> Contact us <% end %></li>
         <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <% if !logged_in? %>
         <li><%= link_to "Log in", login_path, class: ""%></li>
-        <li><%= link_to "Sign up", signup_path, class: ""%></li>
+        <li><%= link_to(signup_path) do %><strong>Choose your plan</strong><%end%></li>
       <% else %>
         <%= link_to(logout_path, method: :delete) do%><button type="button" class="btn btn-default navbar-btn">Log out</button><% end %>
         <li><%= link_to "Your profile", user_path(current_user), class: ""%></li>
