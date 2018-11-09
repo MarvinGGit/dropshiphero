@@ -1,5 +1,5 @@
 <div class="container top">
-  <section class="header animated fadeInDown">
+  <section class="header">
     <%= link_to(products_path) do %>
       <button class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Back to Products</button>
     <% end %>
@@ -12,22 +12,22 @@
     <% end %>
   </section>
   <div class="row">
-    <div class="col-md-12 animated fadeInLeft">
+    <div class="col-md-12">
       <h1 class="product-title"><%= @product.title %></h1>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-5 col-xs-12 img-box animated fadeInLeft"><img src="<%= @product.img %>" class="img-responsive product-image"></div>
+    <div class="col-md-5 col-xs-12 img-box"><img src="<%= @product.img %>" class="img-responsive product-image"></div>
     <div class="col-md-7 col-xs-12">
       <div class="row">
         <div class="col-md-4 col-xs-12 box">
-          <div class="box-content bg-beige shadowed animated fadeInDown">
+          <div class="box-content bg-beige shadowed">
             <p class="info-label">HeroScore</p>
             <h3 class="score">7.5/10</h3>
           </div>
         </div>
         <div class="col-md-8 col-xs-12 box">
-          <div class="box-content bg-red shadowed animated fadeInDown">
+          <div class="box-content bg-red shadowed ">
             <div class="row">
               <div class="col-xs-3" id="padding-left">
                 <p class="info-label">Sellprice</p>
@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="col-md-12 col-xs-12 box">
-          <div class="box-content bg-blue shadowed animated fadeInDown">
+          <div class="box-content bg-blue shadowed">
             <h4 class="title"><i class="fa fa-facebook-square" aria-hidden="true"></i> Ad Engagement</h4>
               <div class="row">
                 <div class="col-md-6 col-xs-12">
@@ -66,11 +66,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-
+          </div>
+          <div class="col-md-12 col-xs-12 box">
+            <div class="box-content bg-light-blue">
+                <h4 class="title"><i class="fa fa-align-left" aria-hidden="true"></i> Description</h4>
+                <p class="product-description"><%= @product.description %></p>
             </div>
           </div>
-        </div>
+        </div> <!-- /upper row -->
       </div>
     </div>
   </div>
