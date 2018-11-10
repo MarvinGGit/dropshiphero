@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_173311) do
+ActiveRecord::Schema.define(version: 2018_11_10_211051) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -43,18 +43,6 @@ ActiveRecord::Schema.define(version: 2018_11_03_173311) do
     t.float "storeprice"
     t.boolean "storeepacket"
     t.float "storeepacketprice"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
-    t.boolean "admin", default: false
-    t.string "firstname"
-    t.string "lastname"
-    t.string "country"
   end
 
 end
