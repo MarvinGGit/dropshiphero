@@ -52,29 +52,107 @@
         </div>
         <div class="col-md-12 col-xs-12 box">
           <div class="box-content bg-blue shadowed">
-            <h4 class="title"><i class="fa fa-facebook-square" aria-hidden="true"></i> Ad Engagement</h4>
-              <div class="row">
-                <div class="col-md-6 col-xs-12">
-                  <div class="engagement">
-                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5.312<br>
-                    <i class="fa fa-commenting" aria-hidden="true"></i> 918<br>
-                    <i class="fa fa-share-alt-square" aria-hidden="true"></i> 1.103
-                  </div>
+            <h4 class="title"><i class="fa fa-bar-chart" aria-hidden="true"></i> Ad Engagement</h4>
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="engagement">
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5.312<br>
+                  <i class="fa fa-commenting" aria-hidden="true"></i> 918<br>
+                  <i class="fa fa-share-alt-square" aria-hidden="true"></i> 1.103
                 </div>
-                <div class="col-md-6 col-xs-12"><br>
-                  <button class="btn btn-facebook btn-lg"><strong><i class="fa fa-search" aria-hidden="true"></i> Show Video Ad</strong></button>
-                </div>
+              </div>
+              <div class="col-md-6 col-xs-12"><br>
+                <button class="btn btn-facebook btn-lg"><strong><i class="fa fa-search" aria-hidden="true"></i> Show Video Ad</strong></button>
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-xs-12 box">
-            <div class="box-content bg-light-blue">
-                <h4 class="title"><i class="fa fa-align-left" aria-hidden="true"></i> Description</h4>
-                <p class="product-description"><%= @product.description %></p>
-            </div>
+        </div>
+        <div class="col-md-12 col-xs-12 box">
+          <div class="box-content bg-light-blue shadowed">
+            <h4 class="title"><i class="fa fa-align-left" aria-hidden="true"></i> Description</h4>
+            <%= simple_format(@product.description, class: "product-description") %>
+            <button class="btn btn-grey btn-lg"><i class="fa fa-lock" aria-hidden="true"></i> Download Reviews</button>
           </div>
-        </div> <!-- /upper row -->
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    <!-- /upper row -->
+    <div class="container">
+      <div class="row">
+      <div class="col-md-12 col-xs-12 box">
+          <div class="box-content header bg-orange shadowed">
+            <div class="row">
+              <div class="col-md-12">
+                <h4 class="title"><i class="fa fa-cart-plus" aria-hidden="true"></i> Where to buy?</h4>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                  <h5 class="subtitle"><%= @product.storename %></h5>
+                  <h5 class="subtitle"><%= @product.storefeedbackscore %>% Feedback-Score</h5>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                  <h5 class="subtitle"><%= number_to_currency(@product.storeprice) %> Product Price</h5>
+                  <h5 class="subtitle"><%= number_to_currency(@product.storeepacketprice) %> E-Packet Price</h5>
+                  <hr>
+                  <h5 class="subtitle"><%= number_to_currency(@product.storeepacketprice + @product.storeprice) %> Total Price with E-Packet</h5>
+
+
+              </div>
+              <div class="col-md-4 col-xs-12">
+                 <button class="btn btn-facebook btn-lg"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Product</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-xs-12 box">
+          <div class="box-content bg-dark-blue shadowed">
+            <div class="row">
+              <div class="col-md-12">
+                <h4 class="title"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook Advertising</h4>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                <h5 class="subtitle">Audiences</h5>
+                <table class="table audience-table">
+                  <% @audiences.each do |audience| %>
+                    <tr>
+                      <td><%= audience %></td>
+                    </tr>
+                  <% end %>
+                </table>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <h5 class="subtitle">AdCopy</h5>
+                <%= simple_format(@product.adcopy, class: "product-description") %>
+              </div>
+              <div class="col-md-4 col-xs-12">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-xs-12 box">
+          <div class="box-content bg-dark-red shadowed">
+            <div class="row">
+              <div class="col-md-12">
+                <h4 class="title"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram Advertising</h4>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                <h5 class="subtitle">Influencer</h5>
+                <table class="table audience-table">
+                  <% @influencer.each do |influencer| %>
+                    <tr>
+                      <td><a href="https://instagram.com/<%= influencer %>" class="influencer-link">@<%= influencer %></a></td>
+                    </tr>
+                  <% end %>
+                </table>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <h5 class="subtitle">AdCopy</h5>
+                <%= simple_format(@product.instagramadcopy, class: "product-description") %>
+              </div>
+              <div class="col-md-4 col-xs-12">
+              </div>
+            </div>
+            <!-- /lower row -->
+          </div>
+        </div>
+      </div>
+    </div>

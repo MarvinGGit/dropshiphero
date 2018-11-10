@@ -25,10 +25,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <% if logged_in? %>  
-            <li class="navbarlink"><%= link_to(products_path) do %>Winning Products<% end %></li>
-            <li class="navbarlink"><%= link_to(categories_path) do %>Categories<% end %></li>
-          <% else %>
+        <% if !logged_in? %>  
           <li><%= link_to(root_path) do %> Home <% end %></li>
           <li><%= link_to(root_path) do %> Prices <% end %></li>
           <li><%= link_to(root_path) do %> FAQ <% end %></li>
