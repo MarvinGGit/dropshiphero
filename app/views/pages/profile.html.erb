@@ -30,10 +30,16 @@
                     <%= link_to(unsubscribe_path) do %><button class="btn btn-default">Cancel Subscription</button><% end %>
                 <% end %>
             <% else %>
+                </h3>
                 <p>You are currently not subscribed to our service.</p>
                 <%= link_to(subscribe_path) do %> <button class="btn btn-primary">Subscribe now</button> <% end %>
             <% end %>
 
+        </div>
+
+        <div class="col-md-4">
+            <h3>Your Account</h3>
+            <%= link_to(edit_user_registration_path) do %><button class="btn btn-default">Edit Account</button><% end %>
         </div>
     
     
