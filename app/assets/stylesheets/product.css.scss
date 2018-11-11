@@ -31,7 +31,7 @@
 
 .box .title{
     font-size: 200%;
-    color: white;
+    color: #484848;
     padding-top: 10px;
     font-weight: 600;
     text-align: left;
@@ -72,11 +72,18 @@
 }
 
 .audience-table{
-    border-top: 1px solid white;
+    margin-top: 1px;
+    border-top: 1px solid #484848;;
 }
 
 .audience-table td{
-    border-bottom: 1px solid white;
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #484848;
+}
+
+.audience-table tr{
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #484848;
 }
 
 .subtitle{
@@ -96,9 +103,16 @@
 }
 
 .influencer-link{
-    color: white;
+    color: #484848;
 }
+
+
 
 .align-left{
     text-align: left;
+}
+
+.grey{
+    background-color: #e6e6e6;
+    color: #484848;;
 }
