@@ -64,7 +64,9 @@ class CategoriesController < ApplicationController
     def index 
         if current_user.admin?
             @categories = Category.all
-        end     
+        else
+            redirect_to root_path
+        end
     end
 
     private
