@@ -56,9 +56,11 @@
             <div class="row">
               <div class="col-md-6 col-xs-12">
                 <div class="engagement">
-                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 5.312<br>
-                  <i class="fa fa-commenting" aria-hidden="true"></i> 918<br>
-                  <i class="fa fa-share-alt-square" aria-hidden="true"></i> 1.103
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <%= @product.likes %><br>
+                  <i class="fa fa-commenting" aria-hidden="true"></i>  <%= @product.comments %><br>
+                  <i class="fa fa-share-alt-square" aria-hidden="true"></i>  <%= @product.shares %><br>
+                  Posted at: <%= @product.facebookad_posted_at%>
+                  
                 </div>
               </div>
               <div class="col-md-6 col-xs-12"><br>
