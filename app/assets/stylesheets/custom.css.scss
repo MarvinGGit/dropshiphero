@@ -132,6 +132,21 @@ a:hover{
 .product-card .image
 {
     margin: -6px;
+    position: relative;
+}
+
+.product-card .heroscore-tag{
+    float: right;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 100%;
+    z-index: 1000;
+    background-color: #F16664;
+    padding: 10px;
+    font-size: 120%;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 .product-card .title
@@ -161,9 +176,10 @@ a:hover{
 {
     border-top: 1px solid #eaeaea;
     padding-top: 8px;
-    color: #484848;
+    color: black;
+    margin-bottom: -5px;
     font-weight: 600;
-    font-size: 150%;
+    font-size: 170%;
 }
 
 .small-label

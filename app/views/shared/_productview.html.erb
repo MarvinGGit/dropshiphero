@@ -19,6 +19,9 @@
                     <div class="content">
                         <%= link_to(product, class: "hvr-grow") do %>
                             <div class="product-card">
+                                <div class="heroscore-tag">
+                                    <%= product.heroscore %>
+                                </div>
                                 <div class="image">
                                     <img src="<%= product.img %>" class="img-responsive">
                                 </div>
