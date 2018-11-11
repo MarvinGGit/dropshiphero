@@ -59,12 +59,12 @@
                   <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <%= @product.likes %><br>
                   <i class="fa fa-commenting" aria-hidden="true"></i>  <%= @product.comments %><br>
                   <i class="fa fa-share-alt-square" aria-hidden="true"></i>  <%= @product.shares %><br>
-                  Posted at: <%= @product.facebookad_posted_at%>
+                  Posted at: <%= Time.at(@product.facebookad_posted_at).strftime("%B %e, %Y")%>
                   
                 </div>
               </div>
               <div class="col-md-6 col-xs-12"><br>
-                <button class="btn btn-facebook btn-lg"><strong><i class="fa fa-search" aria-hidden="true"></i> Show Video Ad</strong></button>
+                <a href="<%= @product.facebookad_url %>"class="btn btn-facebook btn-lg"><strong><i class="fa fa-search" aria-hidden="true"></i> Show Video Ad</strong></a>
               </div>
             </div>
           </div>

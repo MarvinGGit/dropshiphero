@@ -1,24 +1,24 @@
 <div class="container">
     <%= form_for(@product, html:{class: "form-horizontal", role: "form"}) do |f| %>
+            
+              <div class="row">
+                        <div class="col-md-offset-2 col-md-8">
+                            <h2>General</h2>
+                            <hr>
+                        </div>   
+                </div>
             <div class="form-group">
                <div class="control-label col-sm-2">  
-                    <%= f.label :title %> 
+                    <label>Title</label> 
                </div>
                <div class="col-sm-8">
                     <%= f.text_field :title, class: "form-control", placeholder: "Title of product", autofocus: true %>
                 </div>
             </div>
+
             <div class="form-group">
                <div class="control-label col-sm-2">  
-                    <%= f.label :sellprice %> 
-               </div>
-               <div class="col-sm-8">
-                    <%= f.text_field :sellprice, class: "form-control", placeholder: "Sellprice" %>
-                </div>
-            </div>
-            <div class="form-group">
-               <div class="control-label col-sm-2">  
-                    <%= f.label :img %> 
+                      <label>Main Image URL</label>  
                </div>
                <div class="col-sm-8">
                     <%= f.text_field :img, class: "form-control", placeholder: "Image Link"%>
@@ -30,20 +30,43 @@
                </div>
                 <div class="col-sm-8">
                     <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Description of the product" %>
+                    <p class="help-block">Formatting will be saved</p>
                 </div>
             </div>
             <div class="form-group">
                <div class="control-label col-sm-2">  
+                      <label>Review CSV URL</label>  
+               </div>
+               <div class="col-sm-8">
+                    <%= f.text_field :review_csv_url, class: "form-control", placeholder: "Review CSV URL"%>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <h2>Categories</h2>
+                    <hr>
+                </div>   
+            </div>
+
+            <div class="form-group">
+               <div class="control-label col-sm-2">  
                     <label> Categories </label>
                </div>
-                <div class="col-sm-8">
+                <div class="checkbox">
                     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
                         <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text}%>
                     <% end %>
                 </div>
             </div>
 
-            <h2>Store</h2>
+              <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <h2>Store</h2>
+                    <hr>
+                </div>   
+            </div>
+
                 <div class="form-group">
                     <div class="control-label col-sm-2">  
                             <label>Store Name</label>
@@ -62,12 +85,21 @@
                 </div>
                 <div class="form-group">
                     <div class="control-label col-sm-2">  
-                            <label>Store Price</label>
+                            <label>Buy Price</label>
                     </div>
                     <div class="col-sm-8">
                             <%= f.text_field :storeprice, class: "form-control", placeholder: "Store Price"%>
                     </div>
                 </div>
+                <div class="form-group">
+               <div class="control-label col-sm-2">  
+                     <label>Sell Price</label>
+               </div>
+               <div class="col-sm-8">
+                    <%= f.text_field :sellprice, class: "form-control", placeholder: "Sellprice" %>
+                    <p class="help-block">Price the product can be sold for (without currency symbol e.g. 19.99)</p>
+                </div>
+            </div>
                 <div class="form-group">
                     <div class="control-label col-sm-2">  
                             <label>Store Feedback</label>
@@ -92,7 +124,66 @@
                     </div>
                 </div>
 
-            <h2>Facebook Ads</h2>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8">
+                            <h2>Compare Ad</h2>
+                            <hr>
+                        </div>   
+                    </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Advert URL</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :facebookad_url, class: "form-control", placeholder: "Facebook Ad URL"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Likes on Ad</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :likes, class: "form-control", placeholder: "Likes on the FB Post"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Comments on Ad</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :comments, class: "form-control", placeholder: "Comments on the FB Post"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Shares on Ad</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :shares, class: "form-control", placeholder: "Shares on the FB Post"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Post Date</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :facebookad_posted_at, class: "form-control", placeholder: "DD/MM/YYYY"%>
+                            <p class="help-block">Please provide the slashes e.g. 18/05/2018</p>
+                    </div>
+                </div>
+
+                  <div class="row">
+                        <div class="col-md-offset-2 col-md-8">
+                            <h2>Facebook Advertisement</h2>
+                            <hr>
+                        </div>   
+                    </div>
+
                 <div class="form-group">
                     <div class="control-label col-sm-2">  
                             <label>Facebook AdCopy</label>
@@ -101,22 +192,16 @@
                         <%= f.text_area :adcopy, rows: 10, class: "form-control", placeholder: "AdCopy for the product" %>
                     </div>
                 </div>
+          
                 <div class="form-group">
                     <div class="control-label col-sm-2">  
                             <label>Video Ad URL</label>
                     </div>
                     <div class="col-sm-8">
-                            <%= f.text_field :videoadurl, class: "form-control", placeholder: "Video Ad Link"%>
-                        </div>
+                            <%= f.text_field :videoadurl, class: "form-control", placeholder: "Video Ad URL"%>
                     </div>
-                <div class="form-group">
-                    <div class="control-label col-sm-2">  
-                            <label>Picutre Ad URL</label>
-                    </div>
-                    <div class="col-sm-8">
-                            <%= f.text_field :pictureadurl, class: "form-control", placeholder: "Image Ad Link"%>
-                    </div>
-                </div>
+                 </div>
+ 
                   <div class="form-group">
                     <div class="control-label col-sm-2">  
                             <%= f.label :audiences %> 
@@ -126,7 +211,22 @@
                     </div>
                 </div>
             
-            <h2>Instagram Ads</h2>
+                 <div class="row">
+                        <div class="col-md-offset-2 col-md-8">
+                            <h2>Instagram Advertisement</h2>
+                            <hr>
+                        </div>   
+                    </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Picutre Ad URL</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :pictureadurl, class: "form-control", placeholder: "Image Ad URL"%>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="control-label col-sm-2">  
                             <%= f.label :influencer %> 
