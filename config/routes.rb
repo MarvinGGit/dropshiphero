@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :charges
 
+  get 'subscribe', to: 'charges#new'
 
-  get 'signup', to: 'users#new'
   resources :users, except: [:new]
 
   get 'login', to: 'sessions#new'
