@@ -19,7 +19,6 @@ gem "font-awesome-rails"
 gem "animate-rails"
 gem 'sass-rails', '~> 5.0'
 gem 'devise'
-gem 'payola-payments'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
