@@ -88,7 +88,7 @@
                             <label>Buy Price</label>
                     </div>
                     <div class="col-sm-8">
-                            <%= f.text_field :storeprice, class: "form-control", placeholder: "Store Price"%>
+                            <%= f.text_field :storeprice, class: "form-control", placeholder: "4.85"%>
                     </div>
                 </div>
                 <div class="form-group">
@@ -96,7 +96,7 @@
                      <label>Sell Price</label>
                </div>
                <div class="col-sm-8">
-                    <%= f.text_field :sellprice, class: "form-control", placeholder: "Sellprice" %>
+                    <%= f.text_field :sellprice, class: "form-control", placeholder: "19.99" %>
                     <p class="help-block">Price the product can be sold for (without currency symbol e.g. 19.99)</p>
                 </div>
             </div>
@@ -105,7 +105,15 @@
                             <label>Store Feedback</label>
                     </div>
                     <div class="col-sm-8">
-                            <%= f.text_field :storefeedbackscore, class: "form-control", placeholder: "Store Feedback Store"%>
+                            <%= f.text_field :storefeedbackscore, class: "form-control", placeholder: "99.3"%>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Product Rating</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :product_rating, class: "form-control", placeholder: "4.5"%>
                     </div>
                 </div>
                 <div class="form-group">
@@ -164,6 +172,24 @@
                     </div>
                     <div class="col-sm-8">
                             <%= f.text_field :shares, class: "form-control", placeholder: "Shares on the FB Post"%>
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Facebook Page URL</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :facebook_page_url, class: "form-control", placeholder: "https://facebook.com/pagename"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                            <label>Product Page URL</label>
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :product_page_url, class: "form-control", placeholder: "Product Page URL"%>
                     </div>
                 </div>
 

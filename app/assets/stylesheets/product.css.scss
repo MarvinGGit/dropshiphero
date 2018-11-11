@@ -56,11 +56,16 @@
 .btn-facebook{
     background-color: #3b5998;
     color: white;
+    margin: 2px;
 }
 
 .btn-facebook:hover{
     background-color: #8b9dc3;
     color:white;
+}
+
+.btn-margin{
+    margin: 2px;
 }
 
 .img-box{
@@ -87,9 +92,15 @@
 }
 
 .subtitle{
-    font-size: 140%;
+    font-size: 130%;
     text-align: left;
     font-weight: bold;
+}
+
+.price{
+    font-size: 130%;
+    text-align: left;
+    font-weight: 500;
 }
 
 .btn-grey{

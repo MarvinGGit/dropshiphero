@@ -17,7 +17,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-5 col-xs-12 img-box"><img src="<%= @product.img %>" class="img-responsive product-image"></div>
+    <div class="col-md-5 col-xs-12 img-box center">
+         <img src="<%= @product.img %>" class="img-responsive product-image">  
+        
+    </div>  
+
     <div class="col-md-7 col-xs-12">
       <div class="row">
         <div class="col-md-4 col-xs-12 box">
@@ -59,12 +63,17 @@
                   <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <%= @product.likes %><br>
                   <i class="fa fa-commenting" aria-hidden="true"></i>  <%= @product.comments %><br>
                   <i class="fa fa-share-alt-square" aria-hidden="true"></i>  <%= @product.shares %><br>
-                  Posted at: <%= Time.at(@product.facebookad_posted_at).strftime("%B %e, %Y")%>
+                  Posted at: <% if @product.facebookad_posted_at? %>
+                 <%= Time.at(@product.facebookad_posted_at).strftime("%B %e, %Y") %>
+                  <% end%>
                   
                 </div>
               </div>
-              <div class="col-md-6 col-xs-12"><br>
+              <div class="col-md-6 col-xs-12">
                 <a href="<%= @product.facebookad_url %>"class="btn btn-facebook btn-lg"><strong><i class="fa fa-search" aria-hidden="true"></i> Show Video Ad</strong></a>
+                <a href="<%= @product.facebook_page_url %>"class="btn btn-default btn-margin"><strong><i class="fa fa-facebook" aria-hidden="true"></i> Show FB Page</strong></a>
+                <a href="<%= @product.product_page_url %>"class="btn btn-default btn-margin"><strong><i class="fa fa-shopping-basket" aria-hidden="true"></i> Show Product Page</strong></a>
+
               </div>
             </div>
           </div>
@@ -73,7 +82,6 @@
           <div class="box-content grey shadowed">
             <h4 class="title"><i class="fa fa-align-left" aria-hidden="true"></i> Description</h4>
             <%= simple_format(@product.description, class: "product-description") %>
-            <button class="btn btn-grey btn-lg"><i class="fa fa-lock" aria-hidden="true"></i> Download Reviews</button>
           </div>
         </div>
       </div>
@@ -88,19 +96,27 @@
                 <h4 class="title"><i class="fa fa-cart-plus" aria-hidden="true"></i> Where to buy?</h4>
               </div>
               <div class="col-md-4 col-xs-12">
-                  <h5 class="subtitle"><%= @product.storename %></h5>
-                  <h5 class="subtitle"><%= @product.storefeedbackscore %>% Feedback-Score</h5>
+                <div class="engagement">
+                  <%= @product.storename %><br>
+                  <%= number_with_precision(@product.storefeedbackscore, :precision => 2)%>% Feedback-Score<br>
+                  <%= number_with_precision(@product.product_rating, :precision => 1)%> <i class="fa fa-star" aria-hidden="true"></i> Product Rating<br>
+
+                <% if @product.storeepacket? %>
+                  <i class="fa fa-check" aria-hidden="true"></i> E-Packet <strong>possible</strong>
+                <% else%>
+                  <i class="fa fa-times" aria-hidden="true"></i> E-Packet  <strong>not possible</strong>
+                <% end %>
+               </div>
               </div>
               <div class="col-md-4 col-xs-12">
-                  <h5 class="subtitle"><%= number_to_currency(@product.storeprice) %> Product Price</h5>
-                  <h5 class="subtitle"><%= number_to_currency(@product.storeepacketprice) %> E-Packet Price</h5>
+                  <h5 class="price"><%= number_to_currency(@product.storeprice) %> Product Price</h5>
+                  <h5 class="price"><%= number_to_currency(@product.storeepacketprice) %> Shipping Price</h5>
                   <hr>
-                  <h5 class="subtitle"><%= number_to_currency(@product.storeepacketprice + @product.storeprice) %> Total Price with E-Packet</h5>
-
-
+                  <h5 class="price"><strong><%= number_to_currency(@product.storeepacketprice + @product.storeprice) %> Total Price with Shipping</strong></h5>
               </div>
               <div class="col-md-4 col-xs-12">
-                 <button class="btn btn-facebook btn-lg"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Product</button>
+                 <button class="btn btn-facebook btn-lg"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Product Page on AliExpress</button>
+                 <button class="btn btn-facebook btn-lg header shadowed"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Download Reviews CSV</button>
               </div>
             </div>
           </div>
