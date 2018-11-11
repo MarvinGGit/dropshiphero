@@ -52,14 +52,19 @@ class CategoriesController < ApplicationController
             @title = @category.name + " Products"
             @categories = Category.all
             @products = @category.products
-        
+    end
+
+    def destroy
+        set_category
+        @category.delete
+
+        redirect_to categories_path
     end
 
     def index 
+        if current_user.admin?
             @categories = Category.all
-        
-            redirect_to root_path
-        
+        end     
     end
 
     private
