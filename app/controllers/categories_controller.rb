@@ -52,9 +52,7 @@ class CategoriesController < ApplicationController
             @title = @category.name + " Products"
             @categories = Category.all
             @products = @category.products
-       
-            redirect_to root_path
- 
+        
     end
 
     def index 
@@ -74,7 +72,7 @@ class CategoriesController < ApplicationController
         end
 
         def is_user_subscribed
-            if !current_user.subscribed? and !current_user.admin?
+            if !current_user.subscribed? or !current_user.admin?
                 redirect_to subscribe_path
             end
         end
