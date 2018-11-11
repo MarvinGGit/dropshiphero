@@ -5,9 +5,19 @@
         </div>
 
         <div class="col-md-4">
-            <h3>Your Subscription</h3>
-            <p><%= @subscription.plan.nickname %></p>
+            <h3>Your Subscription <% if @trial %><span class="label label-warning">Trial</span><% end %></h3>
+            <h4><span class="label label-primary"><%= @subscription.plan.nickname %></span></h4>
+            <% if @trial  %> 
+               <%= "Trial ends: " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
+            <% end %>
+            <% if @active  %> 
+               <%= "Next billing: " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
+            <% end %>
+             <% if @canceled  %> 
+               <%= "You canceled your subscription. It will run until:  " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
+            <% end %>
 
+            
 
         </div>
     

@@ -37,6 +37,19 @@ class ChargesController < ApplicationController
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
-      redirect_to new_charge_path
+      redirect_to subscribe_path
     end
+
+    def endsubscription
+      if current_user.subscribed?
+        sub = Stripe::Subscription.retrieve(current_user.subscriptionid)
+        sub.delete
+
+        current_user.subscribeduntil = sub.current_period_end
+      else
+        redirect_to subscribe_path
+      end
+    end
+
+
 end
