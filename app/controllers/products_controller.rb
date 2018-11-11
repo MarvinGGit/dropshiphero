@@ -66,7 +66,7 @@ class ProductsController < ApplicationController
         end
 
         def is_user_subscribed
-            if !current_user.subscribed? or !current_user.admin?
+            if !current_user.subscribed? and !current_user.admin?
                      redirect_to subscribe_path
              end
 
