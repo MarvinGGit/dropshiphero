@@ -19,4 +19,15 @@ class PagesController < ApplicationController
         end
     end
 
+    def profile
+        if user_signed_in?
+            @user = current_user
+
+            if @user.subscribed?
+                @subscription = Stripe::Subscription.retrieve(@user.subscriptionid)
+            end
+
+        end
+    end
+
 end

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :charges
 
   get 'subscribe', to: 'charges#new'
+  get 'profile', to: 'pages#profile'
 
   resources :users, except: [:new]
 
