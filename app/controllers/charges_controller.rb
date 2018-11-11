@@ -1,0 +1,42 @@
+class ChargesController < ApplicationController
+    before_action :authenticate_user!
+    
+    def new
+      if current_user.subscribed? 
+        flash[:warning] = "You are already subscribed!"
+        redirect_to root_path
+      end
+    end
+    
+    def create
+      # Amount in cents
+      @amount = 1499
+    
+      customer = Stripe::Customer.create(
+        :email => params[:stripeEmail],
+        :source  => params[:stripeToken]
+      )
+    
+      subscription = Stripe::Subscription.create(
+        :customer => customer.id,
+        :items => [
+          {
+            :plan => "plan_DxBOyspDDcF2E0",
+          },
+        ],
+        :trial_from_plan => true
+      )
+
+      current_user.subscribed = true
+      current_user.subscriptionid = subscription.id
+      current_user.customerid = customer.id
+      current_user.save!
+
+      flash[:success] = "You are now subscribed!"
+      redirect_to root_path
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_charge_path
+    end
+end

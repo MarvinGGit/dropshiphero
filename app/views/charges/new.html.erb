@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="row">
+
+  <div class="col-md-12 center">
+    <h1 class="navbar-logo big">DropshipHero</h1>
+  </div>
+
+  <div class="col-md-12 center">
+    <h1 class="title">Start Your Free DropshipHero 7 Day Trial now!</h1>
+    <h2 class="monthly-fee">After that only 14.99$ per Month</h2>
+  </div>
+
+  <div class="col-md-12 header center">
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Dropship Hero - Starter Plan"
+            data-amount="1499"
+            data-label="Start Free 7 Day Trial"
+            data-panel-label="After Free Trial ends"
+            data-email="<%= current_user.email %>"
+            data-locale="en"></script>
+  <% end %>
+  </div>
+
+  <div class="col-md-12 col-md-offset-1">
+  <hr>
+    <h1 class="step big">How to Use DropshipHero</strong></h1>
+    <h1 class="step">1. Choose a <strong>Proven Winning Product</strong></h1>
+    <h1 class="step">2. Use our <strong>Conversion Optimized</strong> Descriptions and Images to Create Your Product Page</h1>
+    <h1 class="step">3. Use our <strong>Facebook</strong> and <strong>Instagram Targeting</strong> for Profitable Ads</h1>
+    <h1 class="step">4. Dropship the Product from our <strong>Chosen & Trusted Supplier</strong> to Your Customers</h1>
+    <h1 class="step">5. Repeat and <strong>Enjoy the Cash Flow</strong></h1>
+    <hr>
+  </div>
+
+  <div class="col-md-12 header">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <%= image_tag("money.svg", class:"img-responsive")%>
+      </div>
+      <div class="col-md-9">
+        <h2>Find Proven Winning Products for Your Dropshipping Store</h2>
+        <p class="product-feature">It has never been easier to find proven winning products for a Shopify Dropshipping Store.
+           We are hand curating our products with the expertise of Shopify Gurus to give you the highest chances of winning in this highly competitive industry.
+           <br><br>
+           All our products come in a ready to go package with description, images, reviews, audiences you can target on Facebook and influencers you can use for
+           shoutouts on Instagram.
+        </p>
+      </div>
+      <div class="col-md-12">
+        <hr>
+      </div>
+      <div class="col-md-9 col-md-offset-1">
+        <h2>Cancel anytime & Money Back Guarantee</h2>
+        <p class="product-feature">Just try DropshipHero out and see if it fits your need. We are so confident in our system that we are giving you your money back if you don't like it.
+        No questions asked. <br><br>
+        You can also cancel your monthly subscription anytime. Start with the 7 Day Free Trial Period and then cancel if you don't need it anymore.
+        </p>
+      </div>
+      <div class="col-md-2">
+        <%= image_tag("refund.svg", class:"img-responsive")%>
+      </div>
+      <div class="col-md-12">
+        <hr>
+      </div>
+      <div class="col-md-2 col-md-offset-1">
+        <%= image_tag("conversation.svg", class:"img-responsive")%>
+      </div>
+      <div class="col-md-9">
+        <h2>24/7 Support For You</h2>
+        <p class="product-feature">You have any questions or feedback regarding DropshipHero? Our support is there for you 24/7. We will anwser every message we get within 12 hours.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-12 header center margin-bottom">
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Dropship Hero - Starter Plan"
+            data-amount="1499"
+            data-label="Start Free 7 Day Trial"
+            data-panel-label="After Free Trial ends"
+            data-email="<%= current_user.email %>"
+            data-locale="en"></script>
+    <br><br>
+    <h2 class="monthly-fee">After that only 14.99$ per Month</h2>
+  <% end %>
+  </div>
+  </div>
+</div>

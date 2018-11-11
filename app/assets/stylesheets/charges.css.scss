@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "CircularStd Book";
+    src: font-url('Circular.otf') format("truetype");
+  }
+
+.stripe-button-el{
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.stripe-button-el span{
+    font-size: 170% !important;
+    padding: 10px !important;
+    background: #F16664 !important;
+    border: #F16664 !important;
+    outline: none !important;
+    font-family: "CircularStd Book" !important;
+    text-shadow: none !important;
+    height: auto !important;
+    min-width: 30vh !important;
+}
+
+.product-feature{
+    font-size: 120%;
+
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}
+
+.title{
+    text-decoration: underline;
+}
+
+.step{
+    font-size: 180%;
+    letter-spacing: -1px;
+}
+
+.monthly-fee{
+    text-align: center;
+    font-size: 130%;
+    margin-top: -5px;
+}

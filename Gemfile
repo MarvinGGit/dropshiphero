@@ -18,7 +18,11 @@ gem 'country_select', '~> 3.1'
 gem "font-awesome-rails"
 gem "animate-rails"
 gem 'sass-rails', '~> 5.0'
+#authentication
 gem 'devise'
+#payments
+gem 'stripe'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

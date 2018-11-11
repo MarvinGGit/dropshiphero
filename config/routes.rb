@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   resources :products
   resources :categories
+  resources :charges
 
-  get 'signup', to: 'users#new'
+  get 'subscribe', to: 'charges#new'
+
   resources :users, except: [:new]
 
   get 'login', to: 'sessions#new'

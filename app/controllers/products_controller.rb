@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
     before_action :authenticate_user!
-
+    before_action :is_user_subscribed
 
     def create 
         @product = Product.new(product_params)
@@ -49,11 +49,11 @@ class ProductsController < ApplicationController
     end
 
     def new
-     #  if current_user.admin?
+      if current_user.admin?
              @product = Product.new
-      #  else
+        else
             redirect_to root_path
-      #  end
+        end
     end
 
     def edit
@@ -63,6 +63,12 @@ class ProductsController < ApplicationController
     private 
         def set_product
             @product = Product.find(params[:id])
+        end
+
+        def is_user_subscribed
+            if !current_user.subscribed? and !current_user.admin?
+                redirect_to subscribe_path
+            end
         end
 
         def product_params 
