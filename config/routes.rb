@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :charges
 
+  get 'unsubscribe', to: 'charges#endsubscription'
+
   get 'subscribe', to: 'charges#new'
   get 'profile', to: 'pages#profile'
 

@@ -1,23 +1,35 @@
 <div class="container">
     <div class="row">
+        <%= render "shared/alerts" %>
+
         <div class="col-md-12">
             <h1><%= @user.email %> </h1>
         </div>
 
         <div class="col-md-4">
-            <h3>Your Subscription <% if @trial %><span class="label label-warning">Trial</span><% end %></h3>
-            <h4><span class="label label-primary"><%= @subscription.plan.nickname %></span></h4>
-            <% if @trial  %> 
-               <%= "Trial ends: " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
-            <% end %>
-            <% if @active  %> 
-               <%= "Next billing: " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
-            <% end %>
-             <% if @canceled  %> 
-               <%= "You canceled your subscription. It will run until:  " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
-            <% end %>
-
+            <h3>Your Subscription 
             
+            <% if current_user.subscribed?%>
+
+                <% if @trial %><span class="label label-warning">Trial</span><% end %>
+                <% if @canceled %><span class="label label-danger ">Canceled</span><% end %>
+                
+                </h3>
+                <h4><span class="label label-primary"><%= @subscription.plan.nickname %></span></h4>
+                <% if @trial  %> 
+                <%= "Trial ends: " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
+                <% end %>
+                <% if @active  %> 
+                <%= "Next billing: " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
+                <% end %>
+                <% if @canceled  %> 
+                <%= "You canceled your subscription. It will run until:  " + Time.at(@subscription.current_period_end).strftime("%B %e, %Y at %I:%M %p") %>
+                <% end %>
+
+                <% if not @canceled %>
+                    <%= link_to(unsubscribe_path) do %><button class="btn btn-default">Cancel Subscription</button><% end %>
+                <% end %>
+            <% end %>
 
         </div>
     

@@ -24,6 +24,7 @@ class PagesController < ApplicationController
             @user = current_user
 
             if @user.subscribed?
+
                 @subscription = Stripe::Subscription.retrieve(@user.subscriptionid)
 
                 if @subscription.status == "trialing"
@@ -37,8 +38,6 @@ class PagesController < ApplicationController
                 if @subscription.status == "canceled"
                     @canceled = true
                 end
-
-
             end
 
 

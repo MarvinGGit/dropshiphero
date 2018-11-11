@@ -45,7 +45,11 @@ class ChargesController < ApplicationController
         sub = Stripe::Subscription.retrieve(current_user.subscriptionid)
         sub.delete
 
-        current_user.subscribeduntil = sub.current_period_end
+        current_user.subscribed_until = Time.at(sub.current_period_end)
+        current_user.save!
+
+        flash[:success] = "You successfully canceled your subscription! You will still have access until your current subscription runs out."
+        redirect_to profile_path
       else
         redirect_to subscribe_path
       end
