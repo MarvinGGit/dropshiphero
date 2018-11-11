@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
 
+    before_action :authenticate_user!
+
+
     def create 
         @product = Product.new(product_params)
         if @product.save
@@ -14,17 +17,11 @@ class ProductsController < ApplicationController
         @title = "All Winning Products"
         @categories = Category.all
 
-        if !logged_in?
-            redirect_to root_path
-        else
             @products = Product.all
-        end
+   
     end 
     
     def show
-        if !logged_in?
-            redirect_to root_path
-        else
             set_product
             if @product.audiences
                 @audiences = @product.audiences.split(',')
@@ -34,7 +31,6 @@ class ProductsController < ApplicationController
             end
             
             @profit = (@product.sellprice - @product.storeprice)
-        end
     end
 
     def destroy 
@@ -53,11 +49,11 @@ class ProductsController < ApplicationController
     end
 
     def new
-        if logged_in? and current_user.admin?
+     #  if current_user.admin?
              @product = Product.new
-        else
+      #  else
             redirect_to root_path
-        end
+      #  end
     end
 
     def edit
