@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "CircularStd Book";
+    src: font-url('Circular.otf') format("truetype");
+  }
+
+.stripe-button-el{
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.stripe-button-el span{
+    font-size: 100% !important;
+    background: #F16664 !important;
+    border: #F16664 !important;
+    outline: none !important;
+    font-family: "CircularStd Book" !important;
+    text-shadow: none !important;
+}

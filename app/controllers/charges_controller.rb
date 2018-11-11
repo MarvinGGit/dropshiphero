@@ -1,4 +1,6 @@
 class ChargesController < ApplicationController
+    before_action :authenticate_user!
+    
     def new
     end
     
@@ -20,7 +22,9 @@ class ChargesController < ApplicationController
         ]
       )
 
-      
+      #current_user.subscribed = true
+      #current_user.subscriptionid = subscription.id
+      #current_user.customerid = customer.id
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
