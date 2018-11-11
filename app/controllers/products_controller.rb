@@ -49,11 +49,11 @@ class ProductsController < ApplicationController
     end
 
     def new
-     #  if current_user.admin?
+      if current_user.admin?
              @product = Product.new
-      #  else
+        else
             redirect_to root_path
-      #  end
+        end
     end
 
     def edit
@@ -66,7 +66,7 @@ class ProductsController < ApplicationController
         end
 
         def is_user_subscribed
-            if !current_user.subscribed?
+            if !current_user.subscribed? and !current_user.admin?
                 redirect_to new_charge_path
             end
         end

@@ -2,7 +2,7 @@ class ChargesController < ApplicationController
     before_action :authenticate_user!
     
     def new
-      if current_user.subscribed?
+      if current_user.subscribed? 
         flash[:warning] = "You are already subscribed!"
         redirect_to root_path
       end
