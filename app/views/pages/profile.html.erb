@@ -29,6 +29,9 @@
                 <% if not @canceled %>
                     <%= link_to(unsubscribe_path) do %><button class="btn btn-default">Cancel Subscription</button><% end %>
                 <% end %>
+            <% else %>
+                <p>You are currently not subscribed to our service.</p>
+                <%= link_to(subscribe_path) do %> <button class="btn btn-primary">Subscribe now</button> <% end %>
             <% end %>
 
         </div>
