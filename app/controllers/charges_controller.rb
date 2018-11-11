@@ -2,6 +2,9 @@ class ChargesController < ApplicationController
     before_action :authenticate_user!
     
     def new
+      if current_user.subscribed?
+        redirect_to root_path
+      end
     end
     
     def create
@@ -22,9 +25,10 @@ class ChargesController < ApplicationController
         ]
       )
 
-      #current_user.subscribed = true
-      #current_user.subscriptionid = subscription.id
-      #current_user.customerid = customer.id
+      current_user.subscribed = true
+      current_user.subscriptionid = subscription.id
+      current_user.customerid = customer.id
+      current_user.save!
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
