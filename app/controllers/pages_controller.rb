@@ -2,7 +2,11 @@ class PagesController < ApplicationController
 
     def home
         if user_signed_in?
-            redirect_to products_path
+            if current_user.subscribed?
+                redirect_to products_path
+            else
+                redirect_to new_charge_path
+            end
         end
 
     end

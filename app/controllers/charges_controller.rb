@@ -3,6 +3,7 @@ class ChargesController < ApplicationController
     
     def new
       if current_user.subscribed?
+        flash[:warning] = "You are already subscribed!"
         redirect_to root_path
       end
     end
@@ -22,13 +23,17 @@ class ChargesController < ApplicationController
           {
             :plan => "plan_DxBOyspDDcF2E0",
           },
-        ]
+        ],
+        :trial_from_plan => true
       )
 
       current_user.subscribed = true
       current_user.subscriptionid = subscription.id
       current_user.customerid = customer.id
       current_user.save!
+
+      flash[:success] = "You are now subscribed!"
+      redirect_to root_path
 
     rescue Stripe::CardError => e
       flash[:error] = e.message

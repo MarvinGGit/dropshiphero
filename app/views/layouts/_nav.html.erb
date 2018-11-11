@@ -25,7 +25,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <% if user_signed_in? %>  
+        <% if !user_signed_in? %>  
           <li><%= link_to(root_path) do %> Home <% end %></li>
           <li><%= link_to(root_path) do %> Prices <% end %></li>
           <li><%= link_to(root_path) do %> FAQ <% end %></li>
@@ -35,7 +35,7 @@
       <ul class="nav navbar-nav navbar-right">
       <% if !user_signed_in? %>
         <li><%= link_to "Log in", new_user_session_path, class: ""%></li>
-        <li><%= link_to(new_user_registration_path) do %><strong>Choose your plan</strong><%end%></li>
+        <li><%= link_to(new_user_registration_path) do %><strong>Sign Up For Free</strong><%end%></li>
       <% else %>
         <%= link_to(destroy_user_session_path, method: :delete) do%><button type="button" class="btn btn-default navbar-btn">Log out</button><% end %>
         <li><%= link_to "Your profile", user_path(current_user), class: ""%></li>

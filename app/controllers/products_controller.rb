@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
     before_action :authenticate_user!
-
+    before_action :is_user_subscribed
 
     def create 
         @product = Product.new(product_params)
@@ -63,6 +63,12 @@ class ProductsController < ApplicationController
     private 
         def set_product
             @product = Product.find(params[:id])
+        end
+
+        def is_user_subscribed
+            if !current_user.subscribed?
+                redirect_to new_charge_path
+            end
         end
 
         def product_params 
