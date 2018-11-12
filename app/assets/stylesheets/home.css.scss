@@ -72,6 +72,24 @@
     margin-bottom: -10px;
 }
 
+.feature-card{
+    background-color: #6b6b6b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.feature-card h1{
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+
+.feature-card p{
+    letter-spacing: -1px;
+    font-size: 120%;
+    text-align: left;
+}
+
 @media (min-width: 992px) { 
     .home-sign-up-card{
         margin-top: 10vh;
