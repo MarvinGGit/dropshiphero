@@ -246,6 +246,24 @@
                             <%= f.text_area :audiences, class: "form-control", placeholder: "Audience1,Audience2,Audience3,..."%>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                             <label>Female Audience (in %)</label> 
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :facebook_female, class: "form-control", placeholder: "50.9"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="control-label col-sm-2">  
+                             <label>Male Audience (in %)</label> 
+                    </div>
+                    <div class="col-sm-8">
+                            <%= f.text_field :facebook_male, class: "form-control", placeholder: "49.1"%>
+                    </div>
+                </div>
             
                  <div class="row">
                         <div class="col-md-offset-2 col-md-8">

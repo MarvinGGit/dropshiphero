@@ -73,6 +73,6 @@ class ProductsController < ApplicationController
         end
 
         def product_params 
-            params.require(:product).permit(:title, :img, :buyprice, :sellprice, :description, :adcopy, :audiences, :videoadurl, :imageadurl, :influencer, :instagramadcopy, :freeplusshipping, :storename, :storeurl, :storeprice, :storefeedbackscore, :storeepacketprice, :storeepacket, :likes, :shares, :comments, :facebookad_posted_at, :facebookad_url, :review_csv_url, :product_rating, :product_page_url, :facebook_page_url, :heroscore, category_ids: [])
+            params.require(:product).permit(:title, :img, :buyprice, :sellprice, :description, :adcopy, :audiences, :videoadurl, :imageadurl, :influencer, :instagramadcopy, :freeplusshipping, :storename, :storeurl, :storeprice, :storefeedbackscore, :storeepacketprice, :storeepacket, :likes, :shares, :comments, :facebookad_posted_at, :facebookad_url, :review_csv_url, :product_rating, :product_page_url, :facebook_page_url, :facebook_female, :facebook_male, :heroscore, category_ids: [])
         end
 end
