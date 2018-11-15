@@ -142,7 +142,8 @@
                 <%= simple_format(@product.adcopy, class: "product-description") %>
               </div>
               <div class="col-md-4 col-xs-12">
-                
+                 <% data = {"Woman" => @product.facebook_female, "Men" => @product.facebook_male}%>
+                 <%= pie_chart data, donut: true, colors: ["#b00000", "#666"] %>
               </div>
             </div>
           </div>
