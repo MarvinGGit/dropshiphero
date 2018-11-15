@@ -1,6 +1,6 @@
 <div class="container top">
   <section class="header">
-    <%= link_to(products_path, target: :_blank) do %>
+    <%= link_to(products_path) do %>
       <button class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Back to Products</button>
     <% end %>
     <% if current_user.admin? %>
