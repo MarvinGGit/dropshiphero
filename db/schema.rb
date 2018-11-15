@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_205235) do
+ActiveRecord::Schema.define(version: 2018_11_15_070530) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 2018_11_11_205235) do
     t.string "product_page_url"
     t.decimal "product_rating"
     t.decimal "heroscore"
+    t.decimal "facebook_female"
+    t.decimal "facebook_male"
   end
 
   create_table "users", force: :cascade do |t|
