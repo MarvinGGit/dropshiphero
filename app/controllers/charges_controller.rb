@@ -30,6 +30,8 @@ class ChargesController < ApplicationController
       current_user.subscribed = true
       current_user.subscriptionid = subscription.id
       current_user.customerid = customer.id
+
+      current_user.subscribe_until = nil
       current_user.save!
 
       flash[:success] = "You are now subscribed!"
