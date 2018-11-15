@@ -26,6 +26,7 @@
                                     <img src="<%= product.img %>" class="img-responsive">
                                 </div>
                                 <div class="profit">
+                                    <h5 class="small-info">Profit</h5>
                                     <% @profit = (product.sellprice - product.storeprice) %>
                                      <%= number_to_currency(@profit) %>
                                 </div>

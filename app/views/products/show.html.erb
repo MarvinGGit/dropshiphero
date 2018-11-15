@@ -115,8 +115,7 @@
                   <h5 class="price"><strong><%= number_to_currency(@product.storeepacketprice + @product.storeprice) %> Total Price with Shipping</strong></h5>
               </div>
               <div class="col-md-4 col-xs-12">
-                 <button class="btn btn-facebook btn-lg"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Product Page on AliExpress</button>
-                 <button class="btn btn-facebook btn-lg header shadowed"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Download Reviews CSV</button>
+                 <%= link_to(@product.storeurl) do %> <button class="btn btn-facebook btn-lg"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Product Page on AliExpress</button><% end %>
               </div>
             </div>
           </div>
@@ -164,11 +163,17 @@
                   <% end %>
                 </table>
               </div>
-              <div class="col-md-6 col-xs-12">
+              <div class="col-md-4 col-xs-12">
                 <h5 class="subtitle">AdCopy</h5>
                 <%= simple_format(@product.instagramadcopy, class: "product-description") %>
               </div>
               <div class="col-md-4 col-xs-12">
+                <h5 class="subtitle">Message Influencer</h5>
+                <p class="product-description">
+                💵 BUSINESS RELATED 💵<br>
+                I would like to promote a product on your page. <br> 
+                What are your current rates for stories and posts?
+                </p>
               </div>
             </div>
             <!-- /lower row -->

@@ -144,9 +144,18 @@ a:hover{
     z-index: 1000;
     background-color: #F16664;
     padding: 10px;
-    font-size: 120%;
+    font-size: 150%;
     color: #FFFFFF;
     font-weight: bold;
+}
+
+.small-info{
+    margin-bottom: -8px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    margin-left: 10px;
+    color: #868686;
+    text-shadow: none;
 }
 
 .product-card .title
@@ -176,10 +185,11 @@ a:hover{
 {
     border-top: 1px solid #eaeaea;
     padding-top: 8px;
-    color: black;
+    color: #F16664;
+    text-shadow: 0px 0px 2px rgba(150, 150, 150, 0.7);
     margin-bottom: -5px;
     font-weight: 600;
-    font-size: 170%;
+    font-size: 200%;
 }
 
 .small-label
