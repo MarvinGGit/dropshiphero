@@ -17,8 +17,8 @@
     font-size: 110%;
     border-radius: 5px;
     padding: 5px;
-
-    margin-left: 5px;
+    
+    //margin-left: 5px;
 
     border: 1px solid #484848;
     color: #484848;
@@ -28,3 +28,9 @@
     border: 1px solid #F16664;
     color: #F16664;
 }
+
+@media (min-width: 992px) { 
+    .category-select{
+        margin-top: 10px;
+    }
+ }

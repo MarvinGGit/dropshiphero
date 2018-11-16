@@ -6,10 +6,14 @@
     </section>
     <hr>
     <section class="product-categories">
-      <%= link_to(products_path) do %><span class="category-select">All</span><% end %>
-      <% @categories.each do |category| %>
-            <%= link_to(category_path(category)) do %><span class="category-select"><%= category.name %></span><% end %>
-      <% end %>
+    <div class="row">
+     <div class="col-md-12">
+        <%= link_to(products_path) do %><span class="category-select">All</span><% end %>
+        <% @categories.each do |category| %>
+                <%= link_to(category_path(category)) do %><span class="category-select"><%= category.name %></span><% end %>
+        <% end %>
+      </div>
+    </div>
     </section>
     <hr>
 
