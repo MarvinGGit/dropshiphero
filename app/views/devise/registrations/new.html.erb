@@ -45,7 +45,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <%= f.submit "Sign up", class: "btn btn-primary btn-lg", id: "submit-button"  %>
+            <%= f.submit "Sign up", class: "btn btn-primary btn-lg", id: "submit-button", :onclick => "trackRegistration()"  %>
           </div>
         </div>
         <hr>
@@ -128,7 +128,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <%= f.submit "Sign up", class: "btn btn-primary btn-lg", id: "submit-button" %>
+            <%= f.submit "Sign up", class: "btn btn-primary btn-lg", :onclick => "trackRegistration()" %>
           </div>
         </div>
         <hr>
@@ -153,7 +153,12 @@
   </div>
 
 <script type="text/javascript">
-  $( '#$submit-button' ).click(function() {
+
+  function trackRegistration(){
     fbq('track', 'CompleteRegistration');
+  }
+
+
+  $( '#$submit-button' ).click(function() {
   }
 </script>
