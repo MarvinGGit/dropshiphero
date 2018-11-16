@@ -23,7 +23,7 @@ class PagesController < ApplicationController
         if user_signed_in?
             @user = current_user
 
-            if @user.subscribed?
+            if @user.subscribed? and @user.subscriptionid != nil
 
                 @subscription = Stripe::Subscription.retrieve(@user.subscriptionid)
 
