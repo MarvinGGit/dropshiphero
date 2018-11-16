@@ -21,7 +21,7 @@ class ChargesController < ApplicationController
         :customer => customer.id,
         :items => [
           {
-            :plan => "plan_DxBOyspDDcF2E0",
+            :plan => "plan_Dz4HIcgyaYnA2j",
           },
         ],
         :trial_from_plan => true
