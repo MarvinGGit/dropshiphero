@@ -9,14 +9,15 @@ Rails.application.routes.draw do
   end
  end
  
- authenticated do
-    root :to => 'products#index'
- end
-
-
+  authenticated do
+      root :to => 'products#index'
+  end
 
   root 'pages#home'
   get 'dashboard' => 'pages#dashboard'
+
+  get 'contact' => 'pages#contact'
+  get 'faq' => 'pages#faq'
 
   resources :products
   resources :categories

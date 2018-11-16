@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
         @title = "All Winning Products"
         @categories = Category.all.order('name ASC')
 
-
         @products = Product.all
         @products = @products.reverse
    

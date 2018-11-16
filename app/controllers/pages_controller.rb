@@ -39,10 +39,13 @@ class PagesController < ApplicationController
                     @canceled = true
                 end
             end
-
-
-
         end
+    end
+
+    def faq
+    end
+
+    def contact
     end
 
 end

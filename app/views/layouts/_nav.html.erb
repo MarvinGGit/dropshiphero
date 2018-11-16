@@ -28,9 +28,14 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <% if !user_signed_in? %>
+         <li> <%= link_to "FAQ", faq_path %> </li>
+
+        <li> <%= link_to "Contact us",contact_path %> </li>
         <li><%= link_to "Log in", new_user_session_path, class: "" %></li>
       <% else %>
         <%= link_to(destroy_user_session_path, method: :delete) do%><button type="button" class="btn btn-default navbar-btn">Log out</button><% end %>
+        <li> <%= link_to "FAQ",faq_path %> </li>
+        <li> <%= link_to "Contact us",contact_path %> </li>
         <li><%= link_to(profile_path) do %><i class="fa fa-cog" aria-hidden="true"></i> Settings<%end%></li>
         <% if current_user.admin? %>
             <li class="dropdown">
