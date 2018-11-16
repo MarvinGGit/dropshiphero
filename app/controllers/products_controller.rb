@@ -15,9 +15,11 @@ class ProductsController < ApplicationController
 
     def index 
         @title = "All Winning Products"
-        @categories = Category.all
+        @categories = Category.all.order('name ASC')
 
-            @products = Product.all
+
+        @products = Product.all
+        @products = @products.reverse
    
     end 
     

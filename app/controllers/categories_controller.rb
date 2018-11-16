@@ -50,8 +50,9 @@ class CategoriesController < ApplicationController
         
             set_category
             @title = @category.name + " Products"
-            @categories = Category.all
+            @categories = Category.all.order('name ASC')
             @products = @category.products
+            @products = @products.reverse
     end
 
     def destroy
