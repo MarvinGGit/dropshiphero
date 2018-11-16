@@ -34,9 +34,6 @@ class ChargesController < ApplicationController
       current_user.subscribe_until = nil
       current_user.save!
 
-      flash[:success] = "You are now subscribed!"
-      redirect_to root_path
-
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to subscribe_path
