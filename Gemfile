@@ -10,6 +10,7 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 # Use Milligram
 gem 'jquery-rails'
+gem 'rails_real_favicon'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bcrypt', '~> 3.1.7' 
 gem "chartkick"
