@@ -2,7 +2,7 @@ class ShopifysController < ApplicationController
     attr_accessor :tokens
     API_KEY = ENV['API_KEY']
     API_SECRET = ENV['API_SECRET']
-    APP_URL = "dropship-hero.com"
+    APP_URL = "e45422c0.ngrok.io"
 
     def initialize
         @tokens = {}
@@ -31,6 +31,8 @@ class ShopifysController < ApplicationController
 
         if not ActiveSupport::SecurityUtils.secure_compare(hmac, digest)
             return [403, "Authentication failed. Digest provided was: #{digest}"]
+        else
+            redirect_to root
         end
 
     end
