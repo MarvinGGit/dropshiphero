@@ -19,6 +19,8 @@ gem 'country_select', '~> 3.1'
 gem "font-awesome-rails"
 gem "animate-rails"
 gem 'sass-rails', '~> 5.0'
+gem 'shopify_api'
+gem 'httparty'
 #authentication
 gem 'devise'
 #payments

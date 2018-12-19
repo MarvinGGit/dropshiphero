@@ -19,6 +19,11 @@ Rails.application.routes.draw do
   get 'contact' => 'pages#contact'
   get 'faq' => 'pages#faq'
 
+  get 'shopify/auth' => 'shopifys#auth'
+  get 'shopify/install' => 'shopifys#install'
+
+
+
   resources :products
   resources :categories
   resources :charges
