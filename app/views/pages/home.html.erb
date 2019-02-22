@@ -1,54 +1,50 @@
-
-    <div class="row header">
-      <section class="home-head">
-        <div class="col-md-12">
-          <%= render "shared/alerts" %>
-        </div>
-        <div class="col-md-12 col-xs-12 col-md-offset-1">
-          <div class="home-sign-up-card">
-            <div class="header">
-              <h1>Find <span style="color: #F16664">Winning Products</span><br>
-                  For Your E-Commerce Store.</h1>
+<section class="fdb-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+       <h1 class="feature-title-showcase"> Find <span style="color: #F16664;">Winning</span> Products <br>
+        For Your E-Commerce Store</h1>
+      </div>
+      <div class="col-md-6">
+          <h2 class="feature-title-showcase col-md-offset-2">SIGN UP NOW</h2>
+      <%= form_for(resource, as: resource_name, html:{class: "form-horizontal", role: "form"} ,url: registration_path(resource_name)) do |f| %>
+        <%= render 'shared/error_messages', object: resource %>
+          <div class="form-group">
+            <div class="control-label col-sm-2">
+              <%= f.label :email %>
+            </div>
+            <div class="col-sm-8">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 col-xs-12 col-md-offset-1">
-        <%= image_tag("money.svg",class:"img-responsive")%>
-        </div>
-        <div class="col-md-4 col-xs-12 col-md-offset-1 center">
-          <div class="home-sign-up-card">
-            <div class="header">
-                <h1>Find out more</h1>
-                <h1><i class="fa fa-arrow-down animated bounce infinite" aria-hidden="true"></i></h1>
+          <div class="form-group">
+            <div class="control-label col-sm-2">
+              <%= f.label :password %>
+            </div>
+            <div class="col-sm-8">
+              <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+              <% if @minimum_password_length %>
+                <p class="help-block">(<%= @minimum_password_length %> characters minimum)</p>
+              <% end %>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-    <div class="row bg-red">
-      <div class="col-md-12">
-        <h1 class="dense center">What is DropshipHero?</h1>
-        <div class="row">
-          <div class="container center">
-            <h2>Hier Video einfügen</h2>
-          <div>
-        </div>
-        </div>
-        </div>
+          <div class="form-group">
+            <div class="control-label col-sm-2">
+              <%= f.label :password_confirmation %>
+            </div>
+            <div class="col-sm-8">
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <%= f.submit "Sign up", class: "btn btn-primary btn-lg", id: "submit-button" %>
+            </div>
+          </div>
+               <hr>
+      </div>
+    <% end %>
       </div>
     </div>
-    <div class="row header" id="others">
-      <div class="col-md-12 center">
-        <h1 class="feature-title-showcase">What others are saying</h1>
-      </div>
-      <div class="col-md-4">
-        <%= image_tag("proof1.jpg", class: "img-responsive")%>
-      </div>
-      <div class="col-md-4">
-       <%= image_tag("proof2.jpg", class: "img-responsive")%>
-      </div>
-      <div class="col-md-4">
-       <%= image_tag("proof3.jpg", class: "img-responsive")%>
-      </div>
-    </div>
-</>
+  </div>
+</section>
