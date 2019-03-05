@@ -1,145 +1,75 @@
-<div class="row page-fit">
-
-  <div class="col-md-12">
+<div class="row head-section">
   <div class="container">
-  <h2 class="feature-title-showcase col-md-offset-2">SIGN UP NOW <br><span style="font-size: 20px">7 Day Free Trial</span><br><span style="font-size: 16px; padding-top: -10px;">After that only 14.99$/month</span></h2>
-    <%= form_for(resource, as: resource_name, html:{class: "form-horizontal", role: "form"} ,url: registration_path(resource_name)) do |f| %>
-      <%= render 'shared/error_messages', object: resource %>
-        <div class="form-group">
-          <div class="control-label col-sm-2">
-            <%= f.label :email %>
-          </div>
-          <div class="col-sm-8">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="control-label col-sm-2">
-            <%= f.label :password %>
-          </div>
-          <div class="col-sm-8">
-            <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
-            <% if @minimum_password_length %>
-              <p class="help-block">(<%= @minimum_password_length %> characters minimum)</p>
-            <% end %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="control-label col-sm-2">
-            <%= f.label :password_confirmation %>
-          </div>
-          <div class="col-sm-8">
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <%= f.submit "Sign up", class: "btn btn-primary btn-lg", id: "submit-button" %>
-          </div>
-        </div>
-        <hr>
-      </div>
-    <% end %>
-
-  <div class="col-md-12 header">
-    <div class="container">
-      <h1 class="feature-title-showcase">What Will You Get?</h1>
+    <div class="col-md-12" style="vertical-align: middle; margin-bottom: 20px;">
+        <h2 class="sales-subheader">95% of Dropshipping Businesses fail after 1 month.</h2>
+        <h1 class="sales-header">With <span class="navbar-logo" style="color: #484848; letter-spacing: -2px; font-weight: 600;">DropshipHero</span> you won't</h1>
+    </div>
+    <div class="col-md-8">
+      <%= image_tag("screenshot.png", class: "sales-screenshot img-responsive") %>
     </div>
   </div>
+</div>
 
-  <div class="col-md-12 header">
-       <div class="container">
-        <div class="content-box grey shadowed">
-          <h1>🔥 Proven Winning Products (Everyday)</h1>
-          <p class="product-description">We are curating hot trending products for your Dropshipping Business everyday. Every product is a proven winner.</p>
-        </div>  
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="sales-price-card center shadowed">
+        <h1>Only 14.99$</h1>
+        <p class="sales-per-month">per Month</p>
+        <h2>7-Day Free Trial</h2>
+        <ul>
+          <li>Winning Products</li>
+          <li>HeroRank™</li>
+          <li>Best Audiences</li>
+          <li>Top Suppliers</li>
+          <li>Ad Copy</li>
+          <li>Analytics</li>
+          <li>Updates everyday</li>
+        </ul>
       </div>
-  </div>
-
-  <div class="col-md-12 header">
-       <div class="container">
-        <div class="content-box grey shadowed">
-          <h1>😍 Description & Store</h1>
-          <p class="product-description">You found a product that is fitting your store? Great! You can now use our pre written Description and our picked AliExpress Store which we chose from hundreds of competitiors because of multiple metrics (like Feedback Score, Fullfilled Orders, Ratings etc.) and get started right away.</p>
-        </div>  
-      </div>
-  </div>
-
-  <div class="col-md-12 header">
-       <div class="container">
-        <div class="content-box grey shadowed">
-          <h1>💸 Audiences & Influencers</h1>
-          <p class="product-description">After you have set up your Product page it is time to make money. We have already done the research for you. Audiences for Facebook Ads and Influencers on Instagram that are fitting for each unique product.</p>
-        </div>  
-      </div>
-  </div>
-
-  <div class="col-md-12 header">
-    <div class="container">
-      <h1 class="feature-title-showcase">First 7 Days are Free<br><span style="font-size: 18px;"> after that only 14.99$/month</span></h1>
-      <h1 class="feature-title-showcase">Cancel anytime. No questions asked.</h1>
-
+    
     </div>
-  </div>
-
-  <div class="col-md-12 header">
-  <div class="container">
-  <hr>
-  <h2 class="feature-title-showcase col-md-offset-2">SIGN UP NOW</h2>
-    <%= form_for(resource, as: resource_name, html:{class: "form-horizontal", role: "form"} ,url: registration_path(resource_name)) do |f| %>
-      <%= render 'shared/error_messages', object: resource %>
-        <div class="form-group">
-          <div class="control-label col-sm-2">
-            <%= f.label :email %>
+     <div class="col-md-8 mobile-margin">
+        <h2 class="sales-sign-up-title">Sign up now!</h2>
+        <%= form_for(resource, as: resource_name, html:{class: "form-horizontal", role: "form"} ,url: registration_path(resource_name)) do |f| %>
+          <%= render 'shared/error_messages', object: resource %>
+            <div class="form-group">
+              <div class="control-label col-sm-2">
+                <%= f.label :email %>
+              </div>
+              <div class="col-sm-8">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="control-label col-sm-2">
+                <%= f.label :password %>
+              </div>
+              <div class="col-sm-8">
+                <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+                <% if @minimum_password_length %>
+                  <p class="help-block">(<%= @minimum_password_length %> characters minimum)</p>
+                <% end %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="control-label col-sm-2">
+                <%= f.label :password_confirmation %>
+              </div>
+              <div class="col-sm-8">
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12" style="text-align: center;">
+                <%= f.submit "Start Your 7-Day Free Trial", class: "btn btn-primary btn-lg sales-submit-button", id: "submit-button" %>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-8">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="control-label col-sm-2">
-            <%= f.label :password %>
-          </div>
-          <div class="col-sm-8">
-            <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
-            <% if @minimum_password_length %>
-              <p class="help-block">(<%= @minimum_password_length %> characters minimum)</p>
-            <% end %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="control-label col-sm-2">
-            <%= f.label :password_confirmation %>
-          </div>
-          <div class="col-sm-8">
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <%= f.submit "Sign up", class: "btn btn-primary btn-lg" %>
-          </div>
-        </div>
-        <hr>
-      </div>
-    <% end %>
-    <div class="col-md-12">
-    <div class="container">
-      <div class="col-md-12">
-        <h1 class="feature-title-showcase">What others are saying</h1>
-      </div>
-      <div class="col-md-4 header">
-        <%= image_tag("proof1.jpg", class: "img-responsive")%>
-      </div>
-      <div class="col-md-4 header">
-       <%= image_tag("proof2.jpg", class: "img-responsive")%>
-      </div>
-      <div class="col-md-4 header">
-       <%= image_tag("proof3.jpg", class: "img-responsive")%>
+        <% end %>
       </div>
     </div>
-    </div>
-  </div>
+</div>
 
 <script type="text/javascript">
   function trackRegistration(){

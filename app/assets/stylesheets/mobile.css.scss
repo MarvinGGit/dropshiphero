@@ -2,7 +2,22 @@
     .navbar-btn{
         margin-left: 10px;
     }
+ }
 
+ @media(max-width: 575px) {
 
+    .sales-header{
+        font-size: 200% !important;
+    }
 
+    .sales-subheader{
+        font-size: 140% !important;
+    }
+
+    .mobile-margin{
+        margin-top: 30px;
+    }
+
+    .head-section{
+    }
  }
