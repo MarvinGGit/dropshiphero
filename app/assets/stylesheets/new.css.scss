@@ -1,76 +1,53 @@
-.head-section{
-    margin-top: -20px !important;
-    margin-bottom: 50px;
-    //height: 600px;
-    background-color: #F16664;
-    color: white;
+.btn-xlg{
+    font-size: 160%;
+    font-weight: 500;
+    min-width: 40%;
+    margin-top: 5px;
+    padding: 10px;
 }
 
-.sales-header{
-    letter-spacing: -2px;
-    font-size: 300%;
-}
-
-.sales-subheader{
-    font-size: 180%;
-
-    letter-spacing: -2px;
-    font-weight: 600px;
-    margin-bottom: -20px;
-}
-
-.sales-mainimg{
-    max-height: 200px;
+.land-how-it-works-section{
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    background-color: #eeeeee;
 
 }
 
-.sales-submit-button{
-    width: 65%;
+.land-welcome-section{
+    height: 88vh;
 }
 
-.sales-price-card{
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    border: 3px solid #F16664;
+.land-feature-card{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid #F16664;
 }
 
-.sales-price-card h1{
-    letter-spacing: -1px;
-    font-weight: 600;
-}
-
-.sales-price-card .sales-per-month{
-    margin-top: -10px;
-}
-
-.sales-price-card h2{
-    color: #6343dc;
-    letter-spacing: -1px;
-    font-weight: 600;
-    font-size: 140%;
-    margin-top: -8px;
-}
-
-.sales-price-card ul{
-    list-style: none;
+.land-feature-card h4{
     text-align: center;
-    padding-left: 0px !important;
 }
 
-.sales-price-card ul li{
-    font-size: 120%;
-}
-
-.sales-sign-up-title{
-    letter-spacing: -1px;
-    font-weight: 600px;
+.land-feature-card p{
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 10px;
 }
 
-.sales-screenshot{
-    max-height: 30%;
-    border-radius: 3px;
-    margin: 10px;
+.land-key-features{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+
+@media (min-width: 576px) { 
+    .display-middle{
+        margin-top: 20vh;
+    }
+ }
+
+@media(max-width: 575px) {
+    .btn-xlg{
+        width: 100%;
+    }
 }
