@@ -57,6 +57,38 @@
     border-radius: 5px;
 }
 
+.land-product-points{
+    margin:0;
+    margin-bottom: 10px;
+    padding:0;
+    text-align: center;
+    list-style: none;
+    font-size: 110%;
+}
+
+.faq-question{
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #3e3d7a;
+    color: white;
+    padding: 30px;
+}
+
+.faq-anwser{
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #F16664;
+    color: #ffffff;
+    padding: 30px;
+    color: white;
+    font-size: 120%;
+}
+
+.land-faq{
+    padding: 10px;
+    background-color: #eeeeee;
+}
+
 @media (min-width: 576px) { 
     .display-middle{
         margin-top: 20vh;
