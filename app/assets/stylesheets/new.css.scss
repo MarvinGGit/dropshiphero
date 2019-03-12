@@ -9,13 +9,14 @@
 .land-how-it-works-section{
     padding: 20px;
     padding-bottom: 30px;
-    margin-top: 20px;
     background-color: #eeeeee;
 
 }
 
 .land-welcome-section{
-    height: 88vh;
+    min-height: 88vh;
+    background-color: #F16664;
+    margin-top: -20px;
 }
 
 .land-feature-card{
@@ -23,6 +24,8 @@
     margin: 5px;
     border-radius: 5px;
     border: 2px solid #F16664;
+    min-height: 35vh;
+    margin-top: 20px;
 }
 
 .land-feature-card h4{
@@ -31,6 +34,8 @@
 
 .land-feature-card p{
     text-align: center;
+    padding: 5px;
+    font-size: 120%;
 }
 
 .land-key-features{
@@ -38,7 +43,18 @@
     padding: 10px;
 }
 
+.land-social-proof{
+    padding: 10px;
+    background-color: #eeeeee;
+}
 
+.land-pricing-plans{
+    padding: 10px;
+}
+
+.land-pricing-card{
+    border: 5px solid #F16664;
+}
 
 @media (min-width: 576px) { 
     .display-middle{

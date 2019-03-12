@@ -1,11 +1,14 @@
 <div class="land-welcome-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 display-middle">
-        <h3 style="color: #6341dd; font-weight: 500;">95% of dropshipping businesses fail after 1 month.</h3>
-        <h1 style="color: #F16664; font-weight: 500; letter-spacing: -1px;">Don't become part of the statistics.</h1>
-        <h2 style="font-weight: 100 !important;">We give you the best winning products, ads & everything else to make money starting now.</h2>
-        <button class="btn btn-primary btn-xlg shadowed">Start Free Trial</button>
+      <div class="col-md-8 display-middle">
+        <h3 style="color: #ffe732; font-weight: 500;">95% of dropshipping businesses fail after 1 month.</h3>
+        <h1 style="color: white; font-weight: 500; letter-spacing: -1px;">Don't become part of the statistics.</h1>
+        <h2 style="font-weight: 100 !important; color: #bae2ff;">We give you the best winning products, ads & everything else to make money starting now.</h2>
+        <button class="btn btn-secondary btn-xlg shadowed" style="margin-top: 24px;">Start Free Trial</button>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag("iphonemockup.png", class: "img-responsive") %> 
       </div>
     </div>
   </div>
@@ -14,7 +17,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 style="text-align:center; font-weight: 600; color: #F16664;">How it works?</h1>
+        <h1 style="text-align:center; font-weight: 600; color: #F16664; letter-spacing: -1px;">How it works?</h1>
       </div>
     </div>
 
@@ -59,24 +62,28 @@
     <div class="row">
       <div class="col-md-3">
         <div class="land-feature-card">
+          <h1 style="text-align: center;">🔥</h1>
           <h4>Winning products</h4>
           <p>Every day we manually find the best winning products for you. Add these goodies to your store and stop losing money on tests. No need to flush money down the drain anymore!</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="land-feature-card">
+         <h1 style="text-align: center;">🆕</h1>
          <h4>Fresh products</h4>
          <p>We analyze market trends to discover amazing goods daily – the most promising, unusual and potentially hot products. Don't miss your chance to get the cream of the crop.</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="land-feature-card">
+          <h1 style="text-align: center;">📢</h1>
           <h4>Advertisement materials</h4>
           <p>We provide a complete marketing kit for your quick start: Facebook competitors report, social media ad copy, video ads, Facebook targeting. We help you get ahead of the competitors.</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="land-feature-card">
+         <h1 style="text-align: center;">💰</h1>
          <h4>Suppliers</h4>
          <p>Each Product we find got up to 3 different thoroughly researched and reliable suppliers from Aliexpress and other platforms</p>
         </div>
@@ -84,12 +91,41 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-md-12" style="text-align: center; margin-bottom: 20px;">
+    <button class="btn btn-primary btn-xlg shadowed" style="margin-top: 24px;">Start Your Free 3-Day Trial</button>
+  </div>
+</div>
+
 <div class="land-social-proof">
 
-</div>
-<div class="land-pricing-plans">
+  <div class="row">
+    <div class="col-md-12"><h1 style="text-align:center; font-weight: 600; color: #F16664; margin-bottom: 10px;">What others say about us</h1></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" style="padding: 20px;"><%= image_tag("proof1.jpg", class: "img-responsive") %></div>
 
+    <div class="col-md-4" style="padding: 20px;"><%= image_tag("proof2.jpg", class: "img-responsive") %></div>
+
+    <div class="col-md-4" style="padding: 20px;"><%= image_tag("proof3.jpg", class: "img-responsive") %></div>
+  </div>
 </div>
+
+
+<div class="land-pricing-plans">
+  <div class="row">
+    <div class="col-md-12"><h1 style="text-align:center; font-weight: 600; color: #F16664; margin-bottom: 10px;">Pricing</h1></div>
+  </div>
+
+<!--  <div class="row">
+    <div class="col-md-12">
+      <div class="land-pricing-card">
+
+      </div>
+    </div>
+  </div> -->
+</div> 
 <div class="land-partners">
 
 </div>
@@ -135,7 +171,7 @@
                 <%= f.submit "Start Your 7-Day Free Trial", class: "btn btn-primary btn-lg sales-submit-button", id: "submit-button" %>
               </div>
             </div>
-          </div>
+          </>
         <% end %>
         -->
       
