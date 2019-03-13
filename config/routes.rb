@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
  unauthenticated do
   as :user do
-    root :to => 'devise/registrations#new'
+    root :to => 'pages#home'
   end
  end
  
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'dashboard' => 'pages#dashboard'
 
   get 'contact' => 'pages#contact'
-  get 'faq' => 'pages#faq'
+  get 'faq' => 'pages#faq' 
 
   get 'shopify/auth' => 'shopifys#auth'
   get 'shopify/install' => 'shopifys#install'
