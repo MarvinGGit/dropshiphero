@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
         @categories = Category.all.order('name ASC')
 
         @products = Product.all
-        @products.sort { |a,b|  a.id <=> b.id }
+        @products = @products.sort { |a,b|  a.id <=> b.id }
        
        #@products = @products.reverse
     end 
