@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
         @products = Product.all
         @products = @products.sort { |a,b|  a.id <=> b.id }
        
-       #@products = @products.reverse
+        @products = @products.reverse
     end 
     
     def show
@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
             if @product.influencer
                 @influencer = @product.influencer.split(',')
             end
-            
+             
             @profit = (@product.sellprice - @product.storeprice)
     end
 
