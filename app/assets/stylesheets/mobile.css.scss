@@ -2,9 +2,15 @@
     .navbar-btn{
         margin-left: 10px;
     }
+
+
  }
 
  @media(max-width: 575px) {
+    .category-select{
+        display: inline-block;
+        margin: 1px;
+    }
 
     .sales-header{
         font-size: 200% !important;
