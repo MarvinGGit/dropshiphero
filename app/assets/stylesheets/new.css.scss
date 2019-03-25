@@ -20,12 +20,16 @@
 }
 
 .land-feature-card{
-    padding: 5px;
+    padding: 15px;
     margin: 5px;
     border-radius: 5px;
     border: 2px solid #F16664;
-    min-height: 35vh;
     margin-top: 20px;
+    font-size: 110%;
+}
+
+.boxed{
+    min-height: 0vh;
 }
 
 .land-feature-card h4{
@@ -35,6 +39,8 @@
 .land-feature-card p{
     text-align: center;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 120%;
 }
 
