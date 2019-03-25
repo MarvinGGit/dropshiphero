@@ -18,8 +18,9 @@ class ProductsController < ApplicationController
         @categories = Category.all.order('name ASC')
 
         @products = Product.all
-        @products = @products.reverse
-   
+        @products.sort { |a,b|  a.created_at <=> b.created_at }
+       
+       #@products = @products.reverse
     end 
     
     def show
