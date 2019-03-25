@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_070530) do
+ActiveRecord::Schema.define(version: 2019_03_25_191300) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_070530) do
     t.decimal "heroscore"
     t.decimal "facebook_female"
     t.decimal "facebook_male"
+    t.boolean "active", default: true
   end
 
   create_table "users", force: :cascade do |t|
