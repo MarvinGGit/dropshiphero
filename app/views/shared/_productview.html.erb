@@ -19,31 +19,33 @@
 
   <div class="row">
     <% @products.each do |product| %>
-                <div class="col-md-3 col-xs-12">
-                    <div class="content">
-                        <%= link_to(product, class: "hvr-grow") do %>
-                            <div class="product-card">
-                                <div class="heroscore-tag">
-                                    <%= product.heroscore %>
+            <% if product.active? %>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="content">
+                            <%= link_to(product, class: "hvr-grow") do %>
+                                <div class="product-card">
+                                    <div class="heroscore-tag">
+                                        <%= product.heroscore %>
+                                    </div>
+                                    <div class="image">
+                                        <img src="<%= product.img %>" class="img-responsive">
+                                    </div>
+                                    <div class="profit">
+                                        <h5 class="small-info">Profit</h5>
+                                        <% @profit = (product.sellprice - product.storeprice) %>
+                                        <%= number_to_currency(@profit) %>
+                                    </div>
+                                    <div class="title">
+                                        <h4><%= product.title %></h4>
+                                    </div>
+                                    <div class="title">
+                                        <h4><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <%= product.likes %> | <i class="fa fa-commenting" aria-hidden="true"></i> <%= product.comments %> | <i class="fa fa-share-alt-square" aria-hidden="true"></i> <%= product.shares %></h4>
+                                    </div>
                                 </div>
-                                <div class="image">
-                                    <img src="<%= product.img %>" class="img-responsive">
-                                </div>
-                                <div class="profit">
-                                    <h5 class="small-info">Profit</h5>
-                                    <% @profit = (product.sellprice - product.storeprice) %>
-                                     <%= number_to_currency(@profit) %>
-                                </div>
-                                <div class="title">
-                                    <h4><%= product.title %></h4>
-                                </div>
-                                <div class="title">
-                                    <h4><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <%= product.likes %> | <i class="fa fa-commenting" aria-hidden="true"></i> <%= product.comments %> | <i class="fa fa-share-alt-square" aria-hidden="true"></i> <%= product.shares %></h4>
-                                </div>
-                            </div>
-                        <% end %>
+                            <% end %>
+                        </div>
                     </div>
-                </div>
+            <% end %>
         <% end %> 
     </div>
 
