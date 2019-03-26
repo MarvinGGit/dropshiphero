@@ -109,9 +109,9 @@
               </div>
               <div class="col-md-4 col-xs-12">
                   <h5 class="price"><%= number_to_currency(@product.storeprice) %> Product Price</h5>
-                  <h5 class="price"><%= number_to_currency(@product.storeepacketprice) %> Shipping Price</h5>
+                  <h5 class="price"><%= if @product.storeepacketprice? then number_to_currency(@product.storeepacketprice) else number_to_currency(0.0) end %> Shipping Price</h5>
                   <hr>
-                  <h5 class="price"><strong><%= number_to_currency(@product.storeepacketprice + @product.storeprice) %> Total Price with Shipping</strong></h5>
+                  <h5 class="price"><strong><%= if @product.storeepacketprice? then number_to_currency(@product.storeepacketprice + @product.storeprice) else number_to_currency(@product.storeprice) end %> Total Price with Shipping</strong></h5>
               </div>
               <div class="col-md-4 col-xs-12">
                  <%= link_to(@product.storeurl, target: :_blank) do %> <button class="btn btn-facebook btn-lg"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Product Page on AliExpress</button><% end %>
