@@ -7,10 +7,9 @@
 
     <div class="col-md-12 center">
       <h1>Start Your <u>Free</u> DropshipHero 3-Day Trial NOW!</h1>
-      <h2 class="monthly-fee"></h2>
     </div>
 
-    <div class="col-md-12 header center">
+    <div class="col-md-12 header center" style="margin-bottom: 12px;">
     <%= form_tag charges_path do %>
       <article>
         <% if flash[:error].present? %>
@@ -24,12 +23,21 @@
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
               data-description="Dropship Hero - Standard Plan"
               data-amount=""
-              data-label="Start Free 3-Day Trial"
-              data-panel-label="Start Your Trial Now"
+              data-label="Start Your FREE 3-Day Trial"
+              data-panel-label="Start Your FREE Trial Now"
               data-email="<%= current_user.email %>"
               data-locale="en"></script>
     <% end %>
   </div>
+
+   <div class="row">
+      <div class="col-md-6">
+        <%= image_tag("screenshot.png", class: "img-responsive shadowed screenshot") %>
+      </div>
+      <div class="col-md-6">
+        <%= image_tag("screenshot2.png", class: "img-responsive shdadowed screenshot") %>
+      </div>
+    </div>
 
   <div class="row">
     <div class="col-md-4 col-md-offset-4" style="margin-top: 24px;">
@@ -52,7 +60,16 @@
         <p style="font-size: 130%;">There will be absolute <u>no</u> charges until your trial ends! You can cancel anytime and with immediate effect. No questions asked. 100% money back guarantee if you don't like the service.</p>
       </div>
     </div>
-    
+
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Dropship Hero - Standard Plan"
+              data-amount=""
+              data-label="Start Your FREE 3-Day Trial"
+              data-panel-label="Start Your FREE Trial Now"
+              data-email="<%= current_user.email %>"
+              data-locale="en"></script>
+
     <br><br>
   <% end %>
   </div>
