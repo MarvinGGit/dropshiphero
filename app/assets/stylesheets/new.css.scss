@@ -100,6 +100,15 @@ a .btn-secondary{
     color: black;
 }
 
+.icon-img{
+    max-height: 64px;
+}
+
+.screenshot{
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
 @media (min-width: 576px) { 
     .display-middle{
         margin-top: 20vh;
